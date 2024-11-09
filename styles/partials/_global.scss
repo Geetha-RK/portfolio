@@ -4,10 +4,17 @@
     box-sizing: border-box;
 }
 
+html{
+    // background-color: #0f0f10;
+    background: radial-gradient(#333,#000);
+    color: $secondary;
+}
+
 body {
     font-family: "archivo","archivo-extra-condensed","archivo-condensed","archivo-semi-expanded","archivo-expanded", sans-serif;
-    color: $global-text;
+    color: $secondary;
     padding: 0;
+    overflow: hidden;
     margin: 0;
 }
 

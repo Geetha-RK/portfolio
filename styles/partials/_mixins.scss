@@ -18,3 +18,46 @@
         @content;
     }
 }
+
+@keyframes leaves{
+    0% {
+        top:-10%;
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    100%{
+        top:110%;
+    }
+}
+
+// @keyframes animate {
+//     0% {
+//         transform: rotate(0deg);
+//     }
+//     20% {
+//         transform: rotate(45deg);
+//     }
+//     40% {
+//         transform: rotate(90deg);
+//     }
+//     60% {
+//         transform: rotate(125deg);
+//     }
+//     80% {
+//         transform: rotate(180deg);
+//     }
+//     100% {
+//         transform: rotate(225deg);
+//     }
+// }
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg); /* Make a full rotation */
+    }
+}
