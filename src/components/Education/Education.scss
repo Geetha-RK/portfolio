@@ -4,7 +4,8 @@
 .container{
     max-width:1200px;
     margin:10px auto;
-
+    overflow-x: hidden; 
+    padding-bottom: 20rem;
     &__row{
         display: grid;
         grid-column-gap:0px;
@@ -102,7 +103,6 @@
             top:-10px;
             left:20px;
             clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 0% 50%);
-
         }
     }
 
@@ -123,7 +123,6 @@
         grid-area:the_contents;
     }
 
-     // Correctly target the nth-child even row and apply styles to __time::before
   .container__row:nth-child(even) {
     .container__time::before {
       right: initial;
@@ -148,7 +147,43 @@
     }
     .container__description{
         text-align: left;
+        transform: translateX(-150px);
+        transition:all 0.5s;
+        opacity:0;
     }
+    .container__show{
+        transform: translateX(0px);
+        opacity: 1;
+      }
+  }
+
+  .container__row:nth-child(odd) {
+    .container__description{
+        transform: translateX(150px);
+        transition:all 0.5s;
+        opacity:0;
+    }
+
+    .container__show{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  &__circle{
+        content: '';
+        position:absolute;
+        width:17px;
+        height:17px;
+        background-color: #f0f0f0;
+        border: 3px solid rgb(251, 0, 0);  
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &--end{
+            bottom:0;
+        }
   }
 }
 
