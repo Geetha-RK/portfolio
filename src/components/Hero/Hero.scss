@@ -1,246 +1,347 @@
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/mixins" as *;
 
+.box {
+  position: relative;
+  background: radial-gradient(#333, #000);
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
 
-.box{
-    position : absolute;
-    background: radial-gradient(#333,#000);
-    width:100%;
-    height:100%;
-    max-width: 100%; 
-    max-height: 100%; 
-    overflow: hidden; 
+  @include desktop {
+    padding: 0 10rem;
+  }
+}
+.leaves {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  &__img {
+    width: 5rem;
+    height: 5rem;
+    animation: animate 20s linear infinite;
+  }
+  &__container {
+    position: absolute;
+    display: block;
 
-    @include desktop{
-        padding:0 10rem;
+    &:nth-child(1) {
+      left: 0%;
+      animation: leaves 15s linear infinite;
+      animation-delay: -3s;
     }
+    &:nth-child(2) {
+      left: 10%;
+      animation: leaves 20s linear infinite;
+      animation-delay: -3.5s;
+    }
+    &:nth-child(3) {
+      left: 25%;
+      animation: leaves 10s linear infinite;
+      animation-delay: -3s;
+    }
+    &:nth-child(4) {
+      left: 35%;
+      animation: leaves 18s linear infinite;
+      animation-delay: -4s;
+    }
+    &:nth-child(5) {
+      left: 52%;
+      animation: leaves 10s linear infinite;
+      animation-delay: -5s;
+    }
+    &:nth-child(6) {
+      left: 57%;
+      animation: leaves 15s linear infinite;
+      animation-delay: -2s;
+    }
+    &:nth-child(7) {
+      left: 66%;
+      animation: leaves 15s linear infinite;
+      animation-delay: -2s;
+    }
+    &:nth-child(8) {
+      left: 78%;
+      animation: leaves 18s linear infinite;
+      animation-delay: -4s;
+    }
+    &:nth-child(9) {
+      left: 90%;
+      animation: leaves 15s linear infinite;
+      animation-delay: -5s;
+    }
+    &:nth-child(10) {
+      left: 90%;
+      animation: leaves 15s linear infinite;
+      animation-delay: -5s;
+    }
+  }
 }
-.leaves{
-    position:absolute;
-    width:100%;
-    height:100%;
-    &__img{
-        width:5rem;
-        height:5rem;
-        animation:animate 20s linear infinite;
-    }
-    &__container{
-        position:absolute;
-        display: block;
+.leaves2 {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.5) rotateY(180deg);
+  // filter:blur(2px)
+}
+.leaves3 {
+  transform: scale(0.7) rotateY(180deg);
+  filter: blur(4px);
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  // z-index: 10;
 
-        &:nth-child(1){
-            left: 0%;
-            animation:leaves 15s linear infinite;
-            animation-delay: -3s;
-        }
-        &:nth-child(2){
-            left: 10%;
-            animation:leaves 20s linear infinite;
-            animation-delay: -3.5s;
-        }
-        &:nth-child(3){
-            left: 25%;
-            animation:leaves 10s linear infinite;
-            animation-delay: -3s;
-        }
-        &:nth-child(4){
-            left: 35%;
-            animation:leaves 18s linear infinite;
-            animation-delay: -4s;
-        }
-        &:nth-child(5){
-            left: 52%;
-            animation:leaves 10s linear infinite;
-            animation-delay: -5s;
-        }
-        &:nth-child(6){
-            left: 57%;
-            animation:leaves 15s linear infinite;
-            animation-delay: -2s;
-        }
-        &:nth-child(7){
-            left: 66%;
-            animation:leaves 15s linear infinite;
-            animation-delay: -2s;
-        }
-        &:nth-child(8){
-            left: 78%;
-            animation:leaves 18s linear infinite;
-            animation-delay: -4s;
-        }
-        &:nth-child(9){
-            left: 90%;
-            animation:leaves 15s linear infinite;
-            animation-delay: -5s;
-        }
-    }
-}
-.leaves2{
-    width:100%;
-    height:100%;
-    transform: scale(1.5) rotateY(180deg);
-    // filter:blur(2px)
-}
-.leaves3{
-    transform: scale(0.7) rotateY(180deg);
-    filter:blur(4px)
-}
-.nav{
+  &__list {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    // z-index: 10;
+    gap: 2rem;
+    list-style: none;
+    margin-right: 1rem;
+    @include tablet {
+      margin-right: 2rem;
+    }
+    @include desktop {
+      margin-right: 5rem;
+    }
+  }
+  &__anchor {
+    text-decoration: none;
+    color: $primary;
+    transition: color 0.3s ease, transform 0.3s ease;
 
-    &__list{
-        display: flex;
-        gap: 2rem; 
-        list-style: none;
-        margin-right: 1rem;
-        @include tablet{
-            margin-right: 2rem;
-        }
-        @include desktop{
-            margin-right: 5rem;;
-        }
+    &:hover {
+      color: #ff2d76;
+      transform: scale(1.05);
     }
-    &__anchor{
-        text-decoration: none;
-        color:$primary;
-        transition: color 0.3s ease, transform 0.3s ease;
+    &:active {
+      color: #d82e5a; /* Slightly darker shade for active state */
+      transform: scale(2); /* Mild zoom effect when clicked */
+    }
+  }
 
-        &:hover{
-            color:#ff2d76;
-            transform: scale(1.05);
-        }
-        &:active {
-            color: #d82e5a; /* Slightly darker shade for active state */
-            transform: scale(2); /* Mild zoom effect when clicked */
-        }
-    }
-
-    @include tablet{
-        flex-direction: row;
-    }
-    @include desktop{
-        flex-direction: row;
-    }
+  @include tablet {
+    flex-direction: row;
+  }
+  @include desktop {
+    flex-direction: row;
+  }
 }
 .name,
-.name2{
-    margin-left:1.0rem;
+.name2 {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lugrasimo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: $primary;
+  font-size: xx-large;
+  width: 100%;
+  display: none;
+  @include tablet {
+    margin: 2rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Lugrasimo", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color:$primary;
-    font-size: xx-large;
-    width:100%;
+  }
+  @include desktop {
+    display: flex;
+    justify-content: flex-start;
+    margin: 3rem 5rem;
+    font-size: xxx-large;
+  }
+}
+.name2 {
+  display: flex;
+  @include tablet {
     display: none;
-    @include tablet{
-        margin: 2rem;
-        display: flex;
-    }
-    @include desktop{
-        display: flex;
-        justify-content: flex-start;
-        margin:3rem 5rem;
-        font-size: xxx-large;
-    }
+  }
+  @include desktop {
+    display: none;
+  }
 }
-.name2{
+.about {
+  color: $primary;
+  font-family: "archivo-semi-expanded";
+  margin: 3rem 2.5rem;
+  overflow-y: auto;
+  @include tablet {
+    margin-top: 5rem;
+    margin-right: 0;
+    width: 50%;
+    order: 1;
+  }
+  @include desktop {
+    margin: 5rem 5rem;
+    width: 50%;
+    order: 1;
+  }
+
+  &__img {
+    width: 1rem;
+    height: 1rem;
+  }
+  &__para3 {
     display: flex;
-    @include tablet{
-        display: none;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    @include desktop {
+      margin-top: 4rem;
     }
-    @include desktop{
-        display: none;
+  }
+  &__para2 {
+    line-height: 2rem;
+
+    @include tablet {
+      width: 80%;
     }
+    @include desktop {
+      // width:40%;
+      line-height: 3rem;
+    }
+  }
 }
-.about{
-
-    color:$about;
-    font-family: "archivo-semi-expanded";
-    margin: 5rem 2.5rem;
-    @include tablet{
-        margin-right:1rem;
-        width:50%;
-    }
-    @include desktop{
-        margin:5rem 5rem;
-        width:50%;
-    }
-
-    &__img{
-        width:1rem;
-        height:1rem;
-    }
-    &__para3{
-        display: flex;
-        flex-direction: row;
-        gap:1rem;
-        margin-top: 2rem;
-
-        @include desktop{
-            margin-top: 4rem;
-        }
-    }
-    &__para2{
-        line-height: 2rem;
-
-        @include tablet{
-          width:80%;
-        }
-        @include desktop{
-            // width:40%;
-            line-height: 3rem;
-          
-        }
-    }
+span {
+  color: #fb0000;
+  font-family: "Lugrasimo", cursive;
+  font-size: x-large;
 }
-span{
-    color:#ff2d76;
-    font-family: "Lugrasimo", cursive;
-    font-size: x-large;
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include tablet {
+    flex-direction: row;
+  }
+  @include desktop {
+    flex-direction: row;
+  }
 }
-.container2{
+// .profile{
+//     // order:1;
+//     width:20rem;
+//   height: 40rem;
+//   max-height: 40rem;
+//   display: hidden;
+// //   background: radial-gradient(circle, $primary, #ebc7c7); /* Gradient background */
+//   position: relative;
+// //   border-radius: 50%;
+// //   border-top-left-radius: 40%;
+// //   border-bottom-right-radius: 10%;
+// //   border-bottom-left-radius: 10%;
+
+// //   border-top-right-radius: 30%;
+
+//     display: none;
+//   overflow: hidden; /* Ensure content stays within bounds of the circle */
+//   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+//     @include tablet{
+
+//         margin-top:5rem;
+//         width:80%;
+//         height: 40rem;
+//         display: flex;
+//     }
+//     @include desktop{
+//         // margin-top:8rem;
+//         width:20rem;
+//         height: 20rem;
+//         max-height: 40rem;
+//         display: flex;
+
+//     }
+//     &__img{
+//         display: none;
+//         // width:80rem;
+
+//         @include tablet{
+//             display: flex;
+//         }
+//         @include desktop{
+//             display: flex;
+//         }
+//     }
+// }
+
+.profile {
+  display: flex;
+    width:100%;
+    height:100%;
+
+  @include tablet {
     display: flex;
+    width: 50%;
+    border-radius: 10rem;
+    opacity: 0;
+    transform: translateX(-50px); 
+    animation: slideIn 0.5s ease-out forwards; 
+    animation-delay: 0.3s;
+    order: 2;
+  }
+
+  @include desktop {
+    display: flex;
+    width: 50%;
+    border-radius: 10%;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 0.5s ease-out forwards;
+    animation-delay: 0.3s;
+    order: 2;
+  }
+
+  &__img {
+    display: flex;
+    width:18rem;
+    border-radius: 10rem;
+    margin:1rem 3.5rem;
+
+    @include tablet {
+      display: flex;
+      border-radius: 20%;
+      margin-top: 5rem;
+      margin-left:0;
+      width: 92%;
+      height: 30rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: scale(0.9);
+      animation: fadeInZoom 0.6s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+
+    @include desktop {
+        width:92%;
+      display: flex;
+      border-radius: 20%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: scale(0.9); 
+      animation: fadeInZoom 0.6s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+  }
+}
+
+@include mobile {
+  .container2 {
     flex-direction: column;
+  }
 
-    @include tablet{
-        flex-direction: row;
-    }
-    @include desktop{
-        flex-direction: row;
-    }
-}
-.profile{
-    width:20rem;
-    height:30rem;
-    // background: radial-gradient(circle, #d82e5a, #ff7f50);
-    background: radial-gradient(circle, #ff7f50, #d82e5a);
-    position: relative; 
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  .profile {
+    order: -1; 
+  }
 
-    @include tablet{
-        margin-top:10rem;
-    }
-    @include desktop{
-        margin-top:8rem;
-    }
-
-    &__img{
-        width:18rem;
-        height:26rem;
-        border-radius: 50%;  /* Make the image circular to match the container */
-        object-fit: cover;
-        position: absolute;    /* Position the image over the gradient */
-        top: 20px;
-        left: 0;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    }
+  .about {
+    order: 0;
+  }
 }

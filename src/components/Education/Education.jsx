@@ -1,8 +1,8 @@
 import React from 'react'
-
+import './Education.scss'
 const Education = () => {
   return (
-    <div>Education</div>
+    <div className='education'> Education</div>
   )
 }
 

@@ -13,6 +13,7 @@ import linkedin from '../../assets/linkedin.svg'
 import email from '../../assets/email.svg'
 import github from '../../assets/github.svg'
 import profile from '../../assets/profile.png'
+import cherry1 from '../../assets/cherry1.png'
 
 export const assets = {
     leaf1,
@@ -28,6 +29,7 @@ export const assets = {
     linkedin,
     email,
     github,
-    profile
+    profile,
+    cherry1
 
 }

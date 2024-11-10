@@ -14,7 +14,7 @@ body {
     font-family: "archivo","archivo-extra-condensed","archivo-condensed","archivo-semi-expanded","archivo-expanded", sans-serif;
     color: $secondary;
     padding: 0;
-    overflow: hidden;
+    overflow-y: scroll;
     margin: 0;
 }
 
