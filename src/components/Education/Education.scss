@@ -1,9 +1,155 @@
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/mixins" as *;
 
-.education{
-    width:100%;
-    height:5rem;
-    background-color: aliceblue;
+.container{
+    max-width:1200px;
+    margin:10px auto;
 
+    &__row{
+        display: grid;
+        grid-column-gap:0px;
+        padding: 0px 20px;
+
+        &:nth-child(odd){
+            grid-template-areas: 'the_contents the_line empty_column';
+
+            @include tablet{
+                grid-template-columns: 3px 1fr;
+                grid-template-areas: 'the_line the_contents ';
+                text-align: left;
+                grid-column-gap: 20px;
+                
+            }
+            @include desktop{
+                grid-template-areas: 'empty_column the_line the_contents';
+                grid-template-columns: 1fr 3px 1fr;
+                grid-column-gap: 20px;
+            }
+        }
+        &:nth-child(even){
+            grid-template-areas: 'the_contents the_line empty_column';
+            text-align: left;
+
+            @include tablet{
+                grid-template-columns: 3px 1fr;
+                grid-template-areas: 'the_line the_contents ';
+                text-align: left;
+                grid-column-gap: 20px;
+            }
+            @include desktop{
+                text-align: right;
+                grid-column-gap: 20px;
+                grid-template-columns: 1fr 3px 1fr;
+            }
+        }
+    }
+
+    &__line{
+        position: relative;
+        background: radial-gradient(rgb(251, 0, 0), rgb(231, 125, 125));
+        grid-area: the_line;
+        display: none;
+
+        @include tablet{
+            display: inline-block;
+        }
+        @include desktop{
+            display: inline-block;
+        }
+    }
+
+    &__time{
+     position: relative;
+     display: inline-block;
+     padding: 5px 12px;
+     margin-bottom: 20px;
+     margin-top:20px;
+     background-color:  rgb(251, 0, 0);  
+     color:white; 
+
+     &::before{
+        display: none; //not showing in mobile view
+        position:absolute;
+        content: '';
+        height: 3px;
+        width: 20px;
+        background: radial-gradient(rgb(251, 0, 0), rgb(231, 125, 125));
+        right:100%;
+        top:50%;
+        transform: translateY(-50%);
+        @include tablet{
+            display: inline-block;
+        }
+        @include desktop{
+            display: inline-block;
+        }
+     }
+    }
+
+    &__description{
+        position: relative;
+        background-color: white;
+        padding: 15px 20px;
+        border-left: 5px solid rgb(251, 0, 0);  
+        box-shadow: 0px 1px 2px 0px rgba(166, 39, 39, 0.55);
+
+        &::before{
+            position:absolute;
+            content: "";
+            width:20px;
+            height:20px;
+            background-color: rgb(251, 0, 0);  
+            top:-10px;
+            left:20px;
+            clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 0% 50%);
+
+        }
+    }
+
+    &__title{
+        color: #3b3b3b;
+        line-height: 1.4;
+    }
+
+    &__empty-col{
+        grid-area: empty_column;
+
+        @include tablet{
+            display: none;
+        }
+    }
+
+    &__contents{
+        grid-area:the_contents;
+    }
+
+     // Correctly target the nth-child even row and apply styles to __time::before
+  .container__row:nth-child(even) {
+    .container__time::before {
+      right: initial;
+      left: 100%;
+
+      @include tablet{
+        left:initial;
+        right:100%;
+      }
+    }
+    .container__description::before{
+        right:initial;
+        left:20px;
+        @include tablet{
+            right:initial;
+            left:20px;
+        }
+        @include desktop{
+            left:initial;
+            right:20px;
+        }
+    }
+    .container__description{
+        text-align: left;
+    }
+  }
 }
+
+

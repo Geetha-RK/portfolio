@@ -49,6 +49,7 @@ const Hero = () => {
               </path>
             </svg>
             <img className='blob__img' src={assets.profile} alt="Geetha Rashinkar Kumar"></img>
+
           </div>
           <div className="about">
             <p>Hello,</p>
