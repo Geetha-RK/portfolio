@@ -10,6 +10,10 @@
     max-width: 100%; 
     max-height: 100%; 
     overflow: hidden; 
+
+    @include desktop{
+        padding:0 10rem;
+    }
 }
 .leaves{
     position:absolute;
@@ -86,7 +90,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    // z-index: 10;
 
     &__list{
         display: flex;
@@ -103,6 +107,16 @@
     &__anchor{
         text-decoration: none;
         color:$primary;
+        transition: color 0.3s ease, transform 0.3s ease;
+
+        &:hover{
+            color:#ff2d76;
+            transform: scale(1.05);
+        }
+        &:active {
+            color: #d82e5a; /* Slightly darker shade for active state */
+            transform: scale(2); /* Mild zoom effect when clicked */
+        }
     }
 
     @include tablet{
@@ -143,5 +157,90 @@
     }
     @include desktop{
         display: none;
+    }
+}
+.about{
+
+    color:$about;
+    font-family: "archivo-semi-expanded";
+    margin: 5rem 2.5rem;
+    @include tablet{
+        margin-right:1rem;
+        width:50%;
+    }
+    @include desktop{
+        margin:5rem 5rem;
+        width:50%;
+    }
+
+    &__img{
+        width:1rem;
+        height:1rem;
+    }
+    &__para3{
+        display: flex;
+        flex-direction: row;
+        gap:1rem;
+        margin-top: 2rem;
+
+        @include desktop{
+            margin-top: 4rem;
+        }
+    }
+    &__para2{
+        line-height: 2rem;
+
+        @include tablet{
+          width:80%;
+        }
+        @include desktop{
+            // width:40%;
+            line-height: 3rem;
+          
+        }
+    }
+}
+span{
+    color:#ff2d76;
+    font-family: "Lugrasimo", cursive;
+    font-size: x-large;
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+
+    @include tablet{
+        flex-direction: row;
+    }
+    @include desktop{
+        flex-direction: row;
+    }
+}
+.profile{
+    width:20rem;
+    height:30rem;
+    // background: radial-gradient(circle, #d82e5a, #ff7f50);
+    background: radial-gradient(circle, #ff7f50, #d82e5a);
+    position: relative; 
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+    @include tablet{
+        margin-top:10rem;
+    }
+    @include desktop{
+        margin-top:8rem;
+    }
+
+    &__img{
+        width:18rem;
+        height:26rem;
+        border-radius: 50%;  /* Make the image circular to match the container */
+        object-fit: cover;
+        position: absolute;    /* Position the image over the gradient */
+        top: 20px;
+        left: 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 }

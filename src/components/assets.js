@@ -9,7 +9,10 @@ import leaf7 from '../../assets/leaf7.png'
 import leaf8 from '../../assets/leaf8.png'
 import leaf9 from '../../assets/leaf9.png'
 import leaf10 from '../../assets/leaf10.png'
-
+import linkedin from '../../assets/linkedin.svg'
+import email from '../../assets/email.svg'
+import github from '../../assets/github.svg'
+import profile from '../../assets/profile.png'
 
 export const assets = {
     leaf1,
@@ -21,6 +24,10 @@ export const assets = {
     leaf7,
     leaf8,
     leaf9,
-    leaf10
+    leaf10,
+    linkedin,
+    email,
+    github,
+    profile
 
 }
