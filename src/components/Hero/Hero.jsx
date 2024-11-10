@@ -27,6 +27,29 @@ const Hero = () => {
           </ul>
         </div>
         <div className="container2">
+        <div className="blob">
+            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" width="100%" id="blobSvg">
+              <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: 'rgb(255, 45, 118)' }} />
+                  <stop offset="100%" style={{ stopColor: 'rgb(251, 0, 0)' }} />
+                </linearGradient>
+              </defs>
+              <path fill="url(#gradient)">
+                <animate attributeName="d"
+                  dur="5000ms"
+                  repeatCount="indefinite"
+                  values="M450,326Q432,402,355,405Q278,408,208.5,425Q139,442,113.5,375.5Q88,309,52,237Q16,165,77.5,111.5Q139,58,216,32Q293,6,352.5,60Q412,114,440,182Q468,250,450,326Z;
+                  M410.5,312.5Q399,375,344.5,427Q290,479,210,468Q130,457,116.5,380Q103,303,85,243Q67,183,106.5,126Q146,69,217,52.5Q288,36,356,70Q424,104,423,177Q422,250,410.5,312.5Z;
+                  M453.5,327Q434,404,358,419Q282,434,210.5,438.5Q139,443,102,380Q65,317,64.5,249.5Q64,182,96.5,111.5Q129,41,210,30.5Q291,20,359,61Q427,102,450,176Q473,250,453.5,327Z;
+                  M453,330Q440,410,364,437Q288,464,229,426.5Q170,389,119.5,352.5Q69,316,44.5,241Q20,166,87,124.5Q154,83,220.5,62Q287,41,347.5,79.5Q408,118,437,184Q466,250,453,330Z;
+                  M446.5,329.5Q440,409,361,420.5Q282,432,204,448.5Q126,465,104.5,388Q83,311,67,244Q51,177,90.5,109Q130,41,209.5,34Q289,27,361.5,61.5Q434,96,443.5,173Q453,250,446.5,329.5Z;
+                  M450,326Q432,402,355,405Q278,408,208.5,425Q139,442,113.5,375.5Q88,309,52,237Q16,165,77.5,111.5Q139,58,216,32Q293,6,352.5,60Q412,114,440,182Q468,250,450,326Z">
+                </animate>
+              </path>
+            </svg>
+            <img className='blob__img' src={assets.profile} alt="Geetha Rashinkar Kumar"></img>
+          </div>
           <div className="about">
             <p>Hello,</p>
             <p className="about__para2">
@@ -50,9 +73,12 @@ const Hero = () => {
               </a>
             </p>
           </div>
-          <div className='profile'><img className='profile__img' src={assets.profile} alt="Geetha Rashinkar Kumar" /></div>
+          {/* <div className='profile'>
+            <img className='profile__img' src={assets.profile} alt="Geetha Rashinkar Kumar" />
+            </div> */}
           
         </div>
+        
         <div className="leaves">
           <div className="leaves__container">
             <img className="leaves__img" src={assets.leaf1} />
