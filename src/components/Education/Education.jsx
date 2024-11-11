@@ -46,7 +46,7 @@ const Education = () => {
                 <time className='container__time'>2009-2013</time>
                 <div className={`container__description ${isVisible[0] ? 'container__show' : ''}`}>
                   <h3 className='container__title'>Bachelor's degree in Information Technology</h3>
-                  <p>Anna University, TamilNadu, India</p>
+                  <p className='container__para'>Anna University, TamilNadu, India</p>
                 </div>
               </section>  
           </div>
@@ -58,7 +58,7 @@ const Education = () => {
                 <time className='container__time'>2009-2013</time>
                 <div className={`container__description ${isVisible[1] ? 'container__show' : ''}`}>
                   <h3 className='container__title'>Bachelor's degree in Information Technology</h3>
-                  <p>Anna University, TamilNadu, India</p>
+                  <p className='container__para'>Anna University, TamilNadu, India</p>
                 </div>
               </section> 
           </div>
@@ -70,7 +70,7 @@ const Education = () => {
                 <time className='container__time'>2009-2013</time>
                 <div className={`container__description ${isVisible[2] ? 'container__show' : ''}`}>
                   <h3 className='container__title'>Bachelor's degree in Information Technology</h3>
-                  <p>Anna University, TamilNadu, India</p>
+                  <p className='container__para'>Anna University, TamilNadu, India</p>
                 </div>
               </section> 
           </div>
@@ -84,7 +84,7 @@ const Education = () => {
                 <time className='container__time'>2009-2013</time>
                 <div className={`container__description ${isVisible[3] ? 'container__show' : ''}`}>
                   <h3 className='container__title'>Bachelor's degree in Information Technology</h3>
-                  <p>Anna University, TamilNadu, India</p>
+                  <p className='container__para'>Anna University, TamilNadu, India</p>
                 </div>
               </section> 
           </div>
