@@ -1,102 +1,79 @@
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/mixins" as *;
 
-.projects-container{
-    position:relative;
-    width:100vw;
-    height:100vh;
-    border-radius: 15px;
-    overflow: hidden;
-    overflow-x: hidden; 
+.projects {
+    width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    color: white;
 
-    &__slider {
-        position: absolute;
-        top: 80px;
-        right: 150px;
-        bottom: 80px;
-        left: 150px;
-        background: #ccc;
-        border-radius: 15px;
+    &__gallery {
+        display: flex;
+        align-items: center;
+        justify-self: center;
     }
 
-    &__slides{
-        position: absolute;
-        top:50%;
-        transform:translateY(-50%);
-        width:240px;
-        height:320px;
-        background-image: 'url(../../../assets/img1.png)';
-        background-size: cover;
-        background-position: center;
-        border-radius: 15px;
-        transition: 0.5s;
-        box-shadow:0 25px 50px rgba(0,0,0,0.5);
-
-        &:nth-child(1),
-        &:nth-child(2){
-            position:absolute;
-            top:0;
-            left: 0;
-            width:100%;
-            height:100%;
-            transform: translateY(0);
-            box-shadow:0 25px 50px rgba(0,0,0,0.5);
-        }
-        &:nth-child(3){
-            left:calc(50% + 240px);
-            background-size: cover;
-        }
-        &:nth-child(4){
-            left:calc(50% + 500px);
-            background-size: cover;
-        }
-        &:nth-child(5){
-            left:calc(50% + 760px);
-            background-size: cover;
-        }
-        &:nth-child(6){
-            left:calc(50% + 1020px);
-            background-size: cover;
-        }
+    &__img-box {
+        width: 350px;
+        height: 500px;
+        margin: 10px;
+        border-radius: 50px;
+        perspective: 1000px; /* Adds 3D perspective to make the flip effect look more realistic */
     }
 
-}
-.projects-buttons{
-    position:absolute;
-    bottom:15px;
-    display: flex;
-    gap:20px;
+    /* Flip container */
+    .projects__flip-card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d; /* Keeps the 3D transform for the children */
+        transition: transform 0.6s ease; /* Smooth flip animation */
+    }
 
-    &__prev,
-    &__next{
-        position:relative;
-        width:50px;
-        height:50px;
-        background:rgb(251, 0, 0);
-        cursor: pointer;
+    /* Flip the card when hovering */
+    .projects__img-box:hover .projects__flip-card {
+        transform: rotateY(180deg);
+    }
+
+    /* Front of the card (image side) */
+    .projects__flip-card-front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden; /* Prevents the back side from showing when flipped */
+    }
+
+    /* Back of the card (text side) */
+    .projects__flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        // background-color: rgba(0, 0, 0, 0.7); /* Optional: adds a background behind the text */
+        color: white;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 50%;
-
-        &::before{
-            content:'';
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            border-top: 4px solid white;
-            border-left: 4px solid white;
-            transform: rotate(315deg) translate(2px,2px);
-
-        }
-
+        backface-visibility: hidden; /* Prevents the back from showing when flipped */
+        border-radius: 50px; /* Makes sure the back is rounded like the front */
+        text-align: center;
     }
-    &__next{
-        &::before{
-            transform: rotate(135deg) translate(2px,2px);
-        }
+
+    /* Image styling */
+    .projects__img {
+        width: 100%;  /* Image takes the full width of the container */
+        height: 100%; /* Image takes the full height of the container */
+        object-fit: cover;
+        border-radius: 50px;
+    }
+
+    /* Text styling */
+    .projects__img-box h3 {
+        position: absolute;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0;
     }
 }

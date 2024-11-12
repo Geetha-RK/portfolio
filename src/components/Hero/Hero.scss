@@ -5,7 +5,7 @@
   position: relative;
   // background: radial-gradient(#333, #000);
   width: 100%;
-  height: 100%;
+  height: 100vh;
   max-width: 100vw;
   // max-height: 100vh;
   overflow: hidden;
@@ -368,19 +368,28 @@ span {
     margin-top:3rem;
   }
   &__img{
+    // position: absolute;
+    // top: 35px;
+    // left: 53%;
+    // transform: translateX(-50%);  
+    // z-index: 10;  
+    // object-fit: cover;
+    // width:70%;
+
     position: absolute;
-    top: 35px;
-    left: 53%;
-    transform: translateX(-50%);  
-    z-index: 10;  
-    object-fit: cover;
-    width:70%;
+    top: -13px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
     @include tablet{
-      width:70%;
+      // width:70%;
     }
     @include desktop{
-      top:47px;
-      width:70%;
+      // top:47px;
+      // width:70%;
     }
   }
 }

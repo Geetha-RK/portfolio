@@ -1,0 +1,138 @@
+@use "../../../styles/partials/mixins" as *;
+
+// body {
+    // --black: #000000;
+    // --ash-black: #222;
+    // --white: #fafafa;
+    // --sky: #00ccff;
+    // --green: #22dddd;
+    // --blue: #1300ff;
+    // --dusk: #6600ff;
+    // --purple: #9900ff;
+    // --pink: #ff0066;
+    // --red: #fe0222;
+    // --orange: #fd7702;
+    // --yellow: #ffbb00;
+  
+    // --background: var(--ash-black);
+    // --accent: var(--white);
+  
+    // margin: 0;
+    // padding: 0;
+    // background-color: var(--background);
+    // color: var(--accent);
+//   }
+  
+//   * {
+//     font-family: sofia-pro, sans-serif;
+//     font-weight: 400;
+//     font-style: normal;
+    // 
+//   }
+  
+//   h1,
+//   h2,
+//   h3 {
+//     font-family: sofia-pro, sans-serif;
+//     font-weight: 600;
+//     font-style: normal;
+//   }
+  
+  .scrollwork{
+   scroll-snap-type: y mandatory;
+  }
+
+  
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: #222;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    -webkit-border-radius: 1ex;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background: #222;
+  }
+  
+  
+  
+  .work {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .progress {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: black;
+    bottom: 100px;
+  }
+  .imagediv{
+    width:80%;
+    height:47vh;
+    border-radius: 20px;
+    position: relative;
+    max-height: 90vh;
+    margin: 20px;
+    background: var(--white);
+    overflow: hidden;
+
+    @include tablet{
+
+    }
+    @include desktop{
+        height:62vh;
+        margin:10rem;
+    }
+  }
+  .detailsdiv{
+    position: absolute;
+    top:694px;
+    width:80%;
+    height:30vh;
+    margin:27px;
+    background-color: #22dddd;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20%;
+    @include tablet{
+        width:26rem;
+        height:30vh;
+        border-radius: 20%;
+    }
+    @include desktop{
+        position:relative;
+        top:0;
+        width:41%;
+        height:43vh;
+
+    }
+  }
+  .sectioncl{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    scroll-snap-align: center;
+    perspective: 700px;
+    @include tablet{
+
+
+    }
+    @include desktop{
+        flex-direction: row;
+    }
+  }

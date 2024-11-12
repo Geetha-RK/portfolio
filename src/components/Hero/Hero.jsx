@@ -6,7 +6,7 @@ const Hero = () => {
     <div>
       <section className="box">
         <div className="nav">
-          <h1 className="name">&lt; Geetha Rashinkar Kumar /&gt;</h1>
+          <h1 className="name">&lt; Geetha R Kumar /&gt;</h1>
           <h1 className="name2">&lt; Geetha R K /&gt;</h1>
           <ul className="nav__list">
             <li className="nav__item">
@@ -31,8 +31,12 @@ const Hero = () => {
             <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" width="100%" id="blobSvg">
               <defs>
                 <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: 'rgb(255, 45, 118)' }} />
-                  <stop offset="100%" style={{ stopColor: 'rgb(251, 0, 0)' }} />
+                  {/* <stop offset="0%" style={{ stopColor: 'rgb(255, 45, 118)' }} />
+                  <stop offset="100%" style={{ stopColor: 'rgb(251, 0, 0)' }} /> */}
+                  <stop offset="0%" style={{ stopColor: '#B4B8B2', stopOpacity: 0.9 }} />
+  <stop offset="50%" style={{ stopColor: '#A1A7A6', stopOpacity: 0.8 }} />
+  <stop offset="100%" style={{ stopColor: '#E0E4E4', stopOpacity: 0.6 }} />
+
                 </linearGradient>
               </defs>
               <path fill="url(#gradient)">

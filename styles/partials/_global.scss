@@ -2,13 +2,14 @@
 
 * {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 html{
-    // background-color: #0f0f10;
-    background: radial-gradient(#333, #000);
-    // background: radial-gradient(#333,#1b1717);
+    // background: radial-gradient(#333, #000);
+
     color: $secondary;
+   
 }
 
 body {
@@ -17,7 +18,7 @@ body {
     padding: 0;
     overflow-y: scroll;
     margin: 0;
-    // min-height: 250vh;
+
 }
 
 a {

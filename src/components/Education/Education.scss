@@ -4,8 +4,10 @@
 .container{
     max-width:1200px;
     margin:10px auto;
+    height:100vh;
     overflow-x: hidden; 
-    padding-bottom: 20rem;
+    // padding-top:8rem;
+    // padding-bottom: 10rem;
     &__row{
         display: grid;
         grid-column-gap:0px;
