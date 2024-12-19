@@ -25,6 +25,7 @@ import img7 from '../../assets/img7.png'
 import img8 from '../../assets/img8.png'
 import img9 from '../../assets/img9.png'
 import img10 from '../../assets/img10.png'
+import hamberger from '../../assets/hamberger.png'
 
 
 export const assets = {
@@ -44,7 +45,7 @@ export const assets = {
     profile,
     cherry1,
     bg,
-   
+    hamberger,
     img8,
     img9,
     img10
