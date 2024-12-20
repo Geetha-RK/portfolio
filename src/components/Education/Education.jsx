@@ -1,6 +1,7 @@
 import React from 'react'
 import './Education.scss'
 import { useState, useEffect } from 'react';
+import { div } from 'framer-motion/client';
 
 const Education = () => {
   // Initialize state to track the visibility of each description
@@ -35,7 +36,10 @@ const Education = () => {
   }, []);
 
   return (
-   
+    <div className='experience'>
+
+    <section className="box1">
+      <h2 className='heading'>My <span>Experience..</span></h2>
         <div className='container'>
           <div className='container__row'>
             <section className="container__empty-col"></section>
@@ -88,12 +92,9 @@ const Education = () => {
                 </div>
               </section> 
           </div>
-         
-          
-
         </div>
-
- 
+        </section>
+        </div>
   )
 }
 

@@ -1,13 +1,13 @@
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/mixins" as *;
 
+
 .container{
     max-width:1200px;
     margin:10px auto;
-    height:100vh;
-    overflow-x: hidden; 
-    // padding-top:8rem;
-    // padding-bottom: 10rem;
+    
+    // overflow-x: hidden; 
+
     &__row{
         display: grid;
         grid-column-gap:0px;
@@ -49,7 +49,7 @@
 
     &__line{
         position: relative;
-        background: radial-gradient(rgb(251, 0, 0), rgb(231, 125, 125));
+        background: #74579e;
         grid-area: the_line;
         display: none;
 
@@ -68,8 +68,9 @@
      margin-bottom: 20px;
      margin-top:20px;
      border-radius: 4px;
-     background-color:  rgb(251, 0, 0);  
+     background-color:  #74579e;
      color:white; 
+     font-family: 'Sarisfy',cursive;
 
      &::before{
         display: none; //not showing in mobile view
@@ -77,7 +78,7 @@
         content: '';
         height: 3px;
         width: 20px;
-        background: radial-gradient(rgb(251, 0, 0), rgb(231, 125, 125));
+        background: #74579e;
         right:100%;
         top:50%;
         transform: translateY(-50%);
@@ -92,18 +93,23 @@
 
     &__description{
         position: relative;
-        background-color:  #ccc;
         padding: 15px 20px;
         border-radius: 10px;
-        border-left: 5px solid rgb(251, 0, 0);  
-        box-shadow: 0px 1px 2px 0px rgba(166, 39, 39, 0.55);
+        border-left: 5px solid #f16764;
+        box-shadow: 0px 1px 1px 0px #f16764;
+        //
+        backdrop-filter: blur(10px) saturate(90%);
+        -webkit-backdrop-filter: blur(10px) saturate(90%);
+        border-radius: 12px;
+        border-left: 5px solid #f16764;
+        //
 
         &::before{
             position:absolute;
             content: "";
             width:20px;
             height:20px;
-            background-color: rgb(251, 0, 0);  
+            background-color:#f16764;
             top:-10px;
             left:20px;
             clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 0% 50%);
@@ -111,8 +117,9 @@
     }
 
     &__title{
-        color: #3b3b3b;
+        color:  #74579e;
         line-height: 1.4;
+        font-family: 'Sarisfy',cursive;
     }
 
     &__empty-col{
@@ -128,7 +135,8 @@
     }
 
     &__para{
-        color:#3b3b3b;
+        color: #74579e;
+        font-family: 'Sarisfy',cursive;
     }
 
   .container__row:nth-child(even) {
@@ -184,7 +192,7 @@
         width:17px;
         height:17px;
         background-color: #f0f0f0;
-        border: 3px solid rgb(251, 0, 0);  
+        border: 3px solid #74579e; 
         border-radius: 50%;
         left: 50%;
         transform: translateX(-50%);
