@@ -4,8 +4,8 @@ import "./About.scss";
 const About = () => {
   return (
     <div className='about'>
-        <section className="box">
-            <h2>About Me</h2>
+        <section className="box1">
+            <h2 className='heading'>A Little <span>about</span> me..</h2>
             {/* <div className='vs-container'>
                 <div className='vs-container__vsbox'>
                     <div className='vs-container__about'>
@@ -33,10 +33,11 @@ const About = () => {
                     </div>
                     <div className="screen__content">
                         <div className='screen__content-left'>
-                        <p>Hi, I'm Geetha Rashinkar Kumar! My journey into technology started with a love for problem-solving and building impactful solutions. I hold a Bachelor's in IT and, after 2+ years of experience, recently completed a Diploma in Software Engineering.</p>
+                        <p className='screen__content-para'>Hi, I'm Geetha Rashinkar Kumar! My journey into technology started with a love for problem-solving and building impactful solutions. <br /><br /> I hold a Bachelor's in IT and, after 2+ years of experience, recently completed a Diploma in Software Engineering. <br /><br />I’ve gained experience across various web development projects, focusing on creating dynamic applications and collaborating with teams to deliver high-quality results.</p>
                         </div>
                         <div className='screen__content-right'>
-                        <p>I have worked on multiple projects, gaining experience in a wide range of web development tasks. Throughout my journey, I've focused on creating dynamic and efficient web applications, collaborating with teams to bring ideas to life. Each project has helped me refine my problem-solving abilities, attention to detail, and ability to adapt to new challenges, ensuring the delivery of high-quality results.</p>
+                        {/* <p className='screen__content-para'>Each project has helped me refine my problem-solving abilities, attention to detail, and ability to adapt to new challenges, ensuring the delivery of high-quality results.</p> */}
+                        <p className='screen__content-para'>Apart from coding, I love caring for plants, which brings me peace and balance. I’m also passionate about cooking, enjoying the creativity and relaxation it offers outside of my tech world. <br /><br />I'm always excited about new opportunities and collaborations, and I look forward to working with like-minded individuals to create innovative and impactful solutions.</p> 
                         </div>
                     </div>
             </div>

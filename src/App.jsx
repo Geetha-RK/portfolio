@@ -31,7 +31,7 @@ function App() {
         </section> */}
 
         <section id="experience">
-          <MyWork />
+          <Education />
         </section>
 
         <section id="contact">

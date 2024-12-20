@@ -12,9 +12,15 @@
     background-size: cover; 
     background-position: bottom center; 
     background-repeat: no-repeat; 
+    position: fixed;
+    z-index: 10;
+    @include tablet{
+      justify-content: space-evenly;
+    }
   
     @include desktop{
       padding-right:3rem;
+      justify-content: space-evenly;
     }
   
     &__giflottie{
@@ -39,7 +45,7 @@
       font-weight: 400;
       font-style: normal;
       font-size: large;
-      color:#74579e;
+      color: #22DDDD;
     
       @include tablet{ 
         font-size: large;
@@ -74,15 +80,17 @@
   
     &__link {
       text-decoration: none;
-      color:#f06292;
-      color:rgb(192, 71, 10);
+      // color:#f06292;
+      // color:rgb(192, 71, 10);
+      // color: whitesmoke;
+      color: #22DDDD;
   
       
       font-size: 24px;
       list-style: none;
   
       @include tablet{
-        font-size: 24px;
+        font-size: 30px;
       }
       @include desktop{
         font-size: 36px;
