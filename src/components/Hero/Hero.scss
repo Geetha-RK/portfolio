@@ -14,7 +14,7 @@
   background-position: center center; 
   background-repeat: no-repeat; 
   width: 100%;
-  height: 100vh;
+  height: 99vh;
   max-width: 100vw;
   overflow: hidden;
   
@@ -28,142 +28,99 @@
    
   }
 }
-.nav{
-  display: flex;
-  width: 100%;
-  height: 10rem;
-  padding: 1rem;
-  justify-content: space-between;
 
-  @include desktop{
-    padding-right:3rem;
-  }
-
-  &__giflottie{
-    justify-content: flex-end;
-  }
-
-  &__logo{
-    height:7rem;
-    width:10rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include tablet{
-      height:5rem;
-      width:7rem;
-    }
-  }
-
-  &__myname{
-    font-family: "Satisfy", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: large;
-    color:#74579e;
-  
-    @include tablet{ 
-      font-size: large;
-    }
-
-  }
-}
-.navbar {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  &__list {
-    display: none;
-    
-    @include tablet{
-      display: flex;
-      justify-content: space-around;
-    }
-    @include desktop{
-      display: flex;
-      justify-content: space-around;
-    }
-  }
-
-  &__item {
-    margin: 0 15px;
-    font-family: "Gaegu"; 
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
-  }
-
-  &__link {
-    text-decoration: none;
-    color:#f06292;
-    color:rgb(192, 71, 10);
-
-    
-    font-size: 24px;
-    list-style: none;
-
-    @include tablet{
-      font-size: 24px;
-    }
-    @include desktop{
-      font-size: 36px;
-    }
-    &:hover {
-      color: #f39c12;  
-    }
-  }
-  .navbar__item::marker {
-    content: none;  
-  }
-}
-
-  .navbar__hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-
-    @include tablet{
-      display: none;
-    }
-    @include desktop{
-      display: none;
-    }
-
-    .navbar__bar {
-      width: 30px;
-      height: 4px;
-      background-color: #74579e;
-      border-radius: 2px;
-    }
-    
-  }
   .hero-image{
     width:100%;
-    height:70vh;
+    height:20vh;
 
     @include tablet{
-      height:70vh;
+      height:40vh;
     }
     @include desktop{
-      height: 60rem;
+      height: 35rem;
+
     }
   }
   .greetings{
     font-family: 'Matemasie';
     font-weight: 400;
     font-style: normal;
-    font-size: 24px;
-    color:#74579e;
+    font-size: 46px;
+    color:#F48498;
+    margin: 0;
+    margin-bottom: 2rem;
   }
   .intro{
-    font-family: 'Quicksand';
+    font-family: 'Satisfy';
     font-weight: 400;
     font-style: normal;
     font-size: 24px;
     color:#74579e;
+    margin: 0;
   }
+  .intro-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    @include tablet{
+      align-items: center;
+    }
+    @include desktop{
+      padding: 0 2rem 0 3rem;
+    }
+  }
+  span{
+    color: #F48498;
+    font-family: 'Matemasie';
+  }
+  .hero{
+    display: flex;
+    flex-direction: column;
+
+    @include desktop{
+      flex-direction: row;
+    }
+  }
+  .connect{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .connect:hover {
+    transform: scale(1.005);  
+  }
+  .resume-btn{
+    width:8rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    height: 2rem;
+    font-family: "Gaegu"; 
+    font-weight: 400;
+    font-style: normal;
+    color: azure;
+    background-color: #74579e;
+    font-size: 20px;
+    border: none; 
+    cursor: pointer;  
+    text-align: center; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+.resume-btn:hover {
+  background-color: #F48498;
+  transform: scale(1.05);  
+}
+
+
+.resume-btn:active {
+  transform: scale(0.98);  
+}
+
+

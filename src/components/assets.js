@@ -10,8 +10,14 @@ import leaf8 from '../../assets/leaf8.png'
 import leaf9 from '../../assets/leaf9.png'
 import leaf10 from '../../assets/leaf10.png'
 import linkedin from '../../assets/linkedin.svg'
+import linkedinpng from '../../assets/linkedin.png'
+import resume from '../../assets/resume.pdf'
 import email from '../../assets/email.svg'
+import emailpng from '../../assets/email.png'
+
 import github from '../../assets/github.svg'
+import githubpng from '../../assets/github.png'
+
 import profile from '../../assets/profile.png'
 import cherry1 from '../../assets/cherry1.png'
 import bg from '../../assets/bg.jpg'
@@ -26,7 +32,7 @@ import img8 from '../../assets/img8.png'
 import img9 from '../../assets/img9.png'
 import img10 from '../../assets/img10.png'
 import hamberger from '../../assets/hamberger.png'
-
+import canva from '../../assets/canva.jpeg'
 
 export const assets = {
     leaf1,
@@ -40,8 +46,13 @@ export const assets = {
     leaf9,
     leaf10,
     linkedin,
+    linkedinpng,
     email,
+    emailpng,
+    resume,
     github,
+    githubpng,
+    canva,
     profile,
     cherry1,
     bg,
