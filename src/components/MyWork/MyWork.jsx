@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRef } from "react";
 import './MyWork.scss'
-import { work } from '../assets'
+import { proj } from '../assets'
 import {
     motion,
     useScroll,
@@ -23,7 +23,27 @@ import {
         <div className="imagediv" ref={ref}>
         <img className="work" src={imgSrc} alt={`Image ${id}`} />
         </div>
-        <motion.div className="detailsdiv" style={{ y }}>{`#00${id}`}</motion.div>
+        <motion.div className="detailsdiv" style={{ y }}>
+                  <div className="mywork">
+                    <div className="screen__header">
+                        <div className="screen__header screen__header--left">
+                            <div className="screen__header-button screen__header-button--close"></div>
+                            <div className="screen__header-button screen__header-button--maximize"></div>
+                            <div className="screen__header-button screen__header-button--minimize"></div>
+                        </div>
+                        <div className="screen__header screen__header--right">
+                            <div className="screen__header-ellipsis"></div>
+                            <div className="screen__header-ellipsis"></div>
+                            <div className="screen__header-ellipsis"></div>
+                        </div>
+                    </div>
+                    <div className="mywork__content">
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis id animi, qui doloremque culpa aspernatur laborum temporibus. Corporis, pariatur earum!</p>
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, suscipit.</p>
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, recusandae?</p>
+                    </div>
+                    </div>
+        </motion.div>
       </section>
     );
   }
@@ -39,11 +59,16 @@ const Parallax = () => {
   
 
   return (
+    <div className='experience'>
+        <section className="box1">
+          <h2 className='proj'>Projects</h2>
     <div className='scrollwork'>
-      {Object.keys(work).map((key, index) => (
-        <Image key={key} id={key} imgSrc={work[key]} />
+      {Object.keys(proj).map((key, index) => (
+        <Image key={key} id={key} imgSrc={proj[key]} />
       ))}
       <motion.div className="progress" style={{ scaleX }} />
+    </div>
+    </section>
     </div>
   )
 }

@@ -98,18 +98,24 @@
   }
   .detailsdiv{
     position: absolute;
-    top:694px;
+    top:551px;
     width:80%;
     height:30vh;
     margin:27px;
-    background-color: #22dddd;
+    background-color:whitesmoke;
     display: flex;
     flex-direction: column;
-    border-radius: 20%;
+    border-radius: .9375rem;
+    //
+    backdrop-filter: blur(10px) saturate(90%);
+    -webkit-backdrop-filter: blur(10px) saturate(90%);
+    // border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    //
     @include tablet{
-        width:26rem;
+        // width:26rem;
         height:30vh;
-        border-radius: 20%;
+      
     }
     @include desktop{
         position:relative;
@@ -134,5 +140,48 @@
     }
     @include desktop{
         flex-direction: row;
+    }
+  }
+  .proj{
+    font-family: "Gaegu"; 
+      font-weight: 400;
+      font-style: normal;
+      font-size: 32px;
+      margin: 1rem;
+      color: #f16764;
+
+      @include tablet{
+        margin: 1rem 3rem;
+      }
+      @include desktop{
+        margin: 2rem 4rem;
+      }
+  }
+  .mywork{
+    position: relative;
+    backdrop-filter: blur(10px) saturate(90%);
+    -webkit-backdrop-filter: blur(10px) saturate(90%);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    //
+    border-radius: .9375rem;
+    box-shadow: 0 0.5rem 1rem rgba(116, 87, 158, 0.2), 0 0.5rem 2rem rgba(116, 87, 158, 0.25), 0 1rem 3rem rgba(116, 87, 158, 0.3);
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 1.25rem;
+        right: 1.25rem;
+        bottom: 0;
+        border-radius: .9375rem;
+        z-index: -1;
+    }
+
+    &__content{
+        height:auto;
+        margin: 1rem;
+        color: #74579e;
+        font-family: 'Sarisfy',cursive;
     }
   }

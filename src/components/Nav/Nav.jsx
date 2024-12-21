@@ -40,7 +40,7 @@ const Nav = () => {
       <li className="navbar__item">
         <a className="navbar__link" href="#about">
           <img src={assets.about} alt="about" /> 
-          <span className="navbar__link-text">About</span>
+          {/* <span className="navbar__link-text">About</span> */}
         </a>
       </li>
       <li className="navbar__item">
