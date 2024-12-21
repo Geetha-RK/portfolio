@@ -26,16 +26,16 @@ function App() {
           <About />
         </section>
 
-        {/* <section id="projects">
-          <Projects />
-        </section> */}
-
         <section id="experience">
           <Education />
         </section>
 
-        <section id="contact">
+        <section id="projects">
           <MyWork />
+        </section>
+
+        <section id="contact">
+          {/* <MyWork /> */}
         </section>
       </div>
     </Router>

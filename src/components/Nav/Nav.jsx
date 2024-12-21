@@ -11,16 +11,18 @@ const Nav = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
+    
     <div className="nav">
       <div className="nav__logo">
-        <DotLottieReact
+        {/* <DotLottieReact
           src="https://lottie.host/b39171cb-ee7c-4ec8-9959-e4ff4719f82d/YfFikknMIm.lottie"
           width="50px"
           height="50px"
           loop
           autoplay
-        />
-        <div className="nav__myname">Geetha R K</div>
+        /> */}
+        <img  className="logo" src={assets.logo} alt="logo" />
+        {/* <div className="nav__myname">Geetha R K</div> */}
       </div>
       <nav className="navbar">
         {/* Hamburger Icon */}
@@ -32,30 +34,35 @@ const Nav = () => {
           />
         </div>
         {/* Navbar links */}
-        <ul className={`navbar__list ${isMenuOpen ? "active" : ""}`}>
-          <li className="navbar__item">
-            <a className="navbar__link" href="#about">
-              About
-            </a>
-          </li>
-          <li className="navbar__item">
-            <a className="navbar__link" href="#projects">
-              Projects
-            </a>
-          </li>
-          <li className="navbar__item">
-            <a className="navbar__link" href="#experience">
-              Experience
-            </a>
-          </li>
-          <li className="navbar__item">
-            <a className="navbar__link" href="#contact">
-              Contact
-            </a>
-          </li>
-        </ul>
+        
+    <div className="navbar__icons-box">
+    <ul className={`navbar__list ${isMenuOpen ? "active" : ""}`}>
+      <li className="navbar__item">
+        <a className="navbar__link" href="#about">
+          <img src={assets.about} alt="about" /> 
+          <span className="navbar__link-text">About</span>
+        </a>
+      </li>
+      <li className="navbar__item">
+        <a className="navbar__link" href="#projects">
+          <img src={assets.projects} alt="projects" />
+        </a>
+      </li>
+      <li className="navbar__item">
+        <a className="navbar__link" href="#experience">
+          <img src={assets.experience} alt="experience" />
+        </a>
+      </li>
+      <li className="navbar__item">
+        <a className="navbar__link" href="#contact">
+          <img src={assets.contact} alt="contact" />
+        </a>
+      </li>
+    </ul>
+    </div>
       </nav>
     </div>
+    
   );
 };
 

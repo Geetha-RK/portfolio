@@ -34,7 +34,21 @@ import img10 from '../../assets/img10.png'
 import hamberger from '../../assets/hamberger.png'
 import canva from '../../assets/canva.jpeg'
 
+import about from '../../assets/book-user.png'
+import contact from '../../assets/address-book.png'
+import experience from '../../assets/desk.png'
+import projects from '../../assets/display-code.png'
+import app from '../../assets/app.png'
+import logo from '../../assets/logo.png'
+
+
 export const assets = {
+    about,
+    contact,
+    experience,
+    projects,
+    app,
+    logo,
     leaf1,
     leaf2,
     leaf3,

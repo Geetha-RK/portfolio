@@ -12,8 +12,9 @@
     background-size: cover; 
     background-position: bottom center; 
     background-repeat: no-repeat; 
-    position: fixed;
-    z-index: 10;
+    background-color: #74579e;
+    // position: fixed;
+    // z-index: 10;
     @include tablet{
       justify-content: space-evenly;
     }
@@ -33,6 +34,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
   
       @include tablet{
         height:5rem;
@@ -102,6 +104,26 @@
     .navbar__item::marker {
       content: none;  
     }
+    &__link-text {
+      display: none;
+      font-size: 14px; /* Adjust font size as needed */
+      margin-top: 5px; /* Adjust spacing between the image and text */
+      text-align: center;
+    }
+    &__link:hover {
+      display: block;
+    }
+    &__icons-box{
+      display: flex;
+      justify-content: space-between;
+      
+    }
+  }
+
+  .logo{
+   
+    height:50px;
+    margin-top: 2rem;
   }
   
     .navbar__hamburger {

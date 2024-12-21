@@ -49,9 +49,11 @@ const Education = () => {
               <section className="container__contents">
                 <time className='container__time'>2023</time>
                 <div className={`container__description ${isVisible[0] ? 'container__show' : ''}`}>
-                  <h3 className='container__title'>1. Diploma in Software Engineering,</h3>
-                  <p className='container__para'>BrainStation</p>
+                  <h3 className='container__title'>1. Diploma,Software Engineering, 🏫</h3>
+                  <p className='container__para'>Aug-2023 to Nov-2023</p>
+                  <p className='container__para'>BrainStation</p><br />
                   <h3 className='container__title'>2. Salesforce Platform Developer I</h3>
+                  <p className='container__para'>Aug-2023</p>
                 </div>
               </section>  
           </div>
@@ -63,9 +65,10 @@ const Education = () => {
                 <time className='container__time'>2022</time>
                 <div className={`container__description ${isVisible[1] ? 'container__show' : ''}`}>
                   <h2 className='container__title'>Certifications:</h2>
-                  <h3 className='container__title'>1. University of Michigan,</h3>
-                  <p className='container__para'>Programming for everybody-Getting started with Python</p>
-                  <h3 className='container__title'>2. Salesforce Administrator</h3>
+                  <h3 className='container__title'>1. University of Michigan, 📜</h3>
+                  <p className='container__para'>Programming for everybody-Getting started with Python</p><br />
+                  <h3 className='container__title'>2. Salesforce Administrator 📜</h3>
+                  <p className='container__para'>Apr-2022</p>
                 </div>
               </section> 
           </div>
@@ -76,7 +79,8 @@ const Education = () => {
               <section className="container__contents">
                 <time className='container__time'>2014-2016</time>
                 <div className={`container__description ${isVisible[2] ? 'container__show' : ''}`}>
-                  <h3 className='container__title'>Software Developer at UST Global</h3>
+                  <h3 className='container__title'>Software Developer at UST Global 💼</h3>
+                  <p className='container__para'>Feb-2014 to May 2016</p>
                   <p className='container__para'>Technopark, Trivandrum, Kerala</p>
                 </div>
               </section> 
@@ -90,7 +94,7 @@ const Education = () => {
               <section className="container__contents">
                 <time className='container__time'>2009-2013</time>
                 <div className={`container__description ${isVisible[3] ? 'container__show' : ''}`}>
-                  <h3 className='container__title'>Bachelor's degree in Information Technology</h3>
+                  <h3 className='container__title'>Bachelors of Science and Technology, <br /> Information Technology 🎓</h3><br />
                   <div className='container__para-div'>
                     <p className='container__para'>Anna University, TamilNadu, India</p>
                     <p className='container__para'>Grade point Average: 8.54</p>
