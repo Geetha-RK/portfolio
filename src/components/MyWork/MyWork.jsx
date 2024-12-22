@@ -61,7 +61,10 @@ const Parallax = () => {
   return (
     <div className='experience'>
         <section className="box1">
-          <h2 className='proj'>Projects</h2>
+        <div className='waves2'> 
+                
+                </div>
+          <h2 className='proj'><span>Projects </span>+++</h2>
     <div className='scrollwork'>
       {Object.keys(proj).map((key, index) => (
         <Image key={key} id={key} imgSrc={proj[key]} />

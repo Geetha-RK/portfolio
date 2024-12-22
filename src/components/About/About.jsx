@@ -5,6 +5,8 @@ const About = () => {
   return (
     <div className='about'>
         <section className="box1">
+            <div className='waves2'> 
+            </div>
             <h2 className='heading'>A Little <span>about</span> me..</h2>
             {/* <div className='vs-container'>
                 <div className='vs-container__vsbox'>

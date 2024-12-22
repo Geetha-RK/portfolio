@@ -39,6 +39,9 @@ const Education = () => {
     <div className='experience'>
 
     <section className="box1">
+    <div className='waves2'> 
+                
+                </div>
       <h2 className='heading'>My <span>Experience..</span></h2>
         <div className='container'>
           <div className='container__row'>

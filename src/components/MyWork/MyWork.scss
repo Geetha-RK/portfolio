@@ -75,7 +75,7 @@
     left: 0;
     right: 0;
     height: 5px;
-    background: black;
+    background: #74579e;
     bottom: 100px;
   }
   .imagediv{
@@ -92,8 +92,8 @@
 
     }
     @include desktop{
-        height:62vh;
-        margin:10rem;
+        height:71vh;
+        // margin:10rem;
     }
   }
   .detailsdiv{
@@ -126,20 +126,21 @@
     }
   }
   .sectioncl{
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     position: relative;
     scroll-snap-align: center;
     perspective: 700px;
     @include tablet{
-
+      height:100vh;
 
     }
     @include desktop{
         flex-direction: row;
+        height:100vh;
     }
   }
   .proj{

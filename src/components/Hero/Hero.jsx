@@ -9,7 +9,23 @@ const Hero = () => {
     return (
         <div className="bglayer">
               <section className="box">
-                
+              {/* <div className="leaves leaves2">
+           <div className="leaves__container">
+             <img className="leaves__img" src={assets.blobs1} />
+           </div>
+           <div className="leaves__container">
+                 <img className="leaves__img" src={assets.blobs3} />
+           </div>
+           <div className="leaves__container">
+                <img className="leaves__img" src={assets.blobs2} />
+           </div>
+           <div className="leaves__container">
+                <img className="leaves__img" src={assets.blobs4} />
+         </div>
+          <div className="leaves__container">
+                <img className="leaves__img" src={assets.blobs5} />
+          </div>
+            </div> */}
                 <div className="hero">
                     <div className="intro-div">
                         <h1 className="greetings">Hello!</h1>
@@ -19,7 +35,7 @@ const Hero = () => {
                         </a>
                     </div>
                     <div className="hero-image">
-                            <DotLottieReact
+                            {/* <DotLottieReact
                                         // src="https://lottie.host/406e9d7e-5cfe-4624-bccd-1bf9f73d27b0/BbwqFZ4KtT.lottie"
                                         src="https://lottie.host/baacc200-a03b-4766-94a7-e3013d812e92/1DkAAel6Ew.lottie"
                                         width="25px"
@@ -27,7 +43,8 @@ const Hero = () => {
                                         color="#74579e"
                                         loop
                                         autoplay
-                                />
+                                /> */}
+                                <img className="girl" src={assets.girl} alt="girl" />
                     </div>
                    
                 </div>
