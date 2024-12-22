@@ -105,6 +105,14 @@ export const work = {
 }
 
 export const proj = {
-    proj1,
-    proj2
+    project1: {
+        imgSrc: proj1,
+        title: 'Project 1',
+        description: 'Description for project 1...',
+      },
+      project2: {
+        imgSrc: proj2,
+        title: 'Project 2',
+        description: 'Description for project 2...',
+      },
 }

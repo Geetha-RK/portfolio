@@ -13,7 +13,7 @@ import {
     return useTransform(value, [0, 1], [-distance, distance]);
   }
   
-  function Image({ imgSrc, id }) {
+  function Image({ imgSrc, title, description, id }) {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref });
     const y = useParallax(scrollYProgress, 300);
@@ -37,10 +37,12 @@ import {
                             <div className="screen__header-ellipsis"></div>
                         </div>
                     </div>
-                    <div className="mywork__content">
-                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis id animi, qui doloremque culpa aspernatur laborum temporibus. Corporis, pariatur earum!</p>
+                    <div className="mywork__content"> 
+                      {/* <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis id animi, qui doloremque culpa aspernatur laborum temporibus. Corporis, pariatur earum!</p>
                       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, suscipit.</p>
-                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, recusandae?</p>
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, recusandae?</p> */}
+                      <h3>{title}</h3>
+                      <p>{description}</p>
                     </div>
                     </div>
         </motion.div>
@@ -66,9 +68,19 @@ const Parallax = () => {
                 </div>
           <h2 className='proj'><span>Projects </span>+++</h2>
     <div className='scrollwork'>
-      {Object.keys(proj).map((key, index) => (
-        <Image key={key} id={key} imgSrc={proj[key]} />
-      ))}
+      {Object.keys(proj).map((key, index) => {
+        const { imgSrc, title, description } = proj[key];
+        return(
+        // <Image key={key} id={key} imgSrc={proj[key]} />
+        <Image
+                key={key}
+                id={key}
+                imgSrc={imgSrc}
+                title={title}
+                description={description}
+              />
+        );
+      })}
       <motion.div className="progress" style={{ scaleX }} />
     </div>
     </section>
