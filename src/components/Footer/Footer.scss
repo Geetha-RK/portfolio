@@ -1,0 +1,67 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+
+.footer{
+    width: 100%;
+    background-color: #74579e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__content{
+        position: relative;
+        z-index: 10;
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
+        width:100%;
+    }
+
+    &__logo{
+        z-index: 10;
+        
+    }
+
+    &__img{
+        width:6rem;
+        height: 3rem;
+    }
+
+    &__credits{
+        z-index: 10;
+    }
+    &__button{
+        width: 5rem;
+        margin: 1rem 0;
+        border-radius: 4px;
+        height: 2rem;
+        font-family: "Gaegu";
+        font-weight: 400;
+        font-style: normal;
+        color: azure;
+        background-color: #74579e;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        display: inline-flex;    ;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+}
+.waves3{
+    background-image: url('../../../assets/waves3.svg'); 
+    background-size: cover; 
+    background-position: bottom center; 
+    background-repeat: no-repeat; 
+    min-height: 150px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+
+    @include desktop{
+        min-height:250px;
+    }
+}
