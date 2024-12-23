@@ -1,6 +1,6 @@
 import React from 'react'
 import "./About.scss";
-import { skillset } from '../assets';
+import { assets, skillset } from '../assets';
 import { img } from 'framer-motion/client';
 
 const About = () => {
@@ -39,6 +39,8 @@ const About = () => {
                     <img key={index} src={skillset[key]} alt={`Skill ${index + 1}`} />
                 ) 
                 )}
+                <br /><img className="cert" src={assets.pd1} alt="pd1" />
+                <img className="cert" src={assets.admin} alt="admin" />
             </div>
 
         </section>

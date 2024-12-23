@@ -69,9 +69,12 @@ import  typescript from '../../assets/skills/typescript.svg'
 import  sass from '../../assets/skills/sass.svg'
 import tailwind from '../../assets/skills/tailwind.svg'
 import mongodb from '../../assets/skills/mongodb.svg'
-
+import pd1 from '../../assets/skills/pd1.png'
+import admin from '../../assets/skills/admin.png'
 
 export const assets = {
+  pd1,
+  admin,
     blobs1,
     blobs2,
     blobs3,
@@ -222,6 +225,6 @@ export const skillset = {
   git,
   githubskill,
   jira,  
-  figma,
+  figma
 
 }

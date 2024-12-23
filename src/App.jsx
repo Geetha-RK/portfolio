@@ -6,6 +6,7 @@ import Projects from './components/Projects/Projects.jsx'
 import MyWork from './components/MyWork/MyWork.jsx'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/About/About.jsx'
+import { Contact } from './components/contact/Contact.jsx'
 
 function App() {
 
@@ -35,7 +36,7 @@ function App() {
         </section>
 
         <section id="contact">
-          {/* <MyWork /> */}
+          <Contact/>
         </section>
       </div>
     </Router>
