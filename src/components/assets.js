@@ -6,16 +6,6 @@ import proj4 from '../../assets/proj4.png'
 import proj5 from '../../assets/proj5.png'
 import proj6 from '../../assets/proj6.png'
 
-
-
-// import leaf3 from '../../assets/leaf3.png'
-// import leaf4 from '../../assets/leaf4.png'
-// import leaf5 from '../../assets/leaf5.png'
-// import leaf6 from '../../assets/leaf6.png'
-// import leaf7 from '../../assets/leaf7.png'
-// import leaf8 from '../../assets/leaf8.png'
-// import leaf9 from '../../assets/leaf9.png'
-// import leaf10 from '../../assets/leaf10.png'
 import linkedin from '../../assets/linkedin.svg' //
 import linkedinpng from '../../assets/linkedin.png'
 import resume from '../../assets/resume.pdf'
@@ -57,7 +47,28 @@ import blobs3 from '../../assets/blobs3.gif'
 import blobs4 from '../../assets/blobs4.gif'
 import blobs5 from '../../assets/blobs5.gif'
 
-
+//
+import  git from '../../assets/skills/git.svg'
+import  githubskill from '../../assets/skills/github.svg'
+import  jira from '../../assets/skills/jira.svg'
+import  axios from '../../assets/skills/axios.png'
+import  javascript from '../../assets/skills/javascript (1).svg'
+import  html from '../../assets/skills/html.svg'
+import  css from '../../assets/skills/css.svg'
+import  express from '../../assets/skills/express.svg'
+import  figma from '../../assets/skills/figma.svg'
+import  firebase from '../../assets/skills/firebase.svg'
+import  json from '../../assets/skills/json.png'
+import  knex from '../../assets/skills/knex.png'
+import  materialui from '../../assets/skills/material-ui.svg'
+import  mysql from '../../assets/skills/mysql.svg'
+import  nextjs from '../../assets/skills/nextjs.svg'
+import  postman from '../../assets/skills/postman.svg'
+import  react from '../../assets/skills/react.svg'
+import  typescript from '../../assets/skills/typescript.svg'
+import  sass from '../../assets/skills/sass.svg'
+import tailwind from '../../assets/skills/tailwind.svg'
+import mongodb from '../../assets/skills/mongodb.svg'
 
 
 export const assets = {
@@ -73,16 +84,6 @@ export const assets = {
     projects,
     app,
     logo,
-    // leaf1,
-    // leaf2,
-    // leaf3,
-    // leaf4,
-    // leaf5,
-    // leaf6,
-    // leaf7,
-    // leaf8,
-    // leaf9,
-    // leaf10,
     linkedin,
     linkedinpng,
     email,
@@ -194,7 +195,33 @@ export const proj = {
                 'Knex.js'
             ]
     },
+  }
     
     
     
+export const skillset = {
+  html,
+  css,
+  sass,
+  materialui,
+  tailwind,
+  javascript,
+  react,
+  typescript,
+  nextjs,
+  axios,
+  json,
+  express,
+  //add node.js
+  knex,
+  postman,
+  mysql,
+  // mongodb,
+  firebase,
+
+  git,
+  githubskill,
+  jira,  
+  figma,
+
 }
