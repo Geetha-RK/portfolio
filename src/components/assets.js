@@ -30,7 +30,7 @@ import img8 from '../../assets/img8.png'
 import img9 from '../../assets/img9.png'
 import img10 from '../../assets/img10.png'
 //
-import hamberger from '../../assets/hamberger.png'
+import hamberger from '../../assets/hamberger.svg'
 import canva from '../../assets/canva.jpeg'
 
 import girl from '../../assets/girl.png'

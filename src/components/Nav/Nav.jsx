@@ -5,36 +5,30 @@ import "./Nav.scss";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+ 
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
   return (
     
     <div className="nav">
       <div className="nav__logo">
-      
         <img  className="logo" src={assets.logo} alt="logo" />
-        {/* <div className="nav__myname">Geetha R K</div> */}
       </div>
       <nav className="navbar">
         {/* Hamburger Icon */}
-        <div className="navbar__hamburger" onClick={toggleMenu}>
+        {/* <div className="navbar__hamburger" onClick={toggleMenu}>
           <img
             src={assets.hamberger}
             alt="Hamburger Icon"
-            className="navbar__hamburger-icon"
+            className="navbar__hamburger-icon"  
           />
-        </div>
+        </div> */}
         {/* Navbar links */}
         
     <div className="navbar__icons-box">
-    <ul className={`navbar__list ${isMenuOpen ? "active" : ""}`}>
+    <ul className={`navbar__list`}>
       <li className="navbar__item">
         <a className="navbar__link" href="#about">
           <img src={assets.about} alt="about" /> 
-          {/* <span className="navbar__link-text">About</span> */}
         </a>
       </li>
       <li className="navbar__item">
