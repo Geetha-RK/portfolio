@@ -68,6 +68,7 @@
     bottom: 0;
     width: 100%;
     height: 100%;
+    // border-radius: 10px;
   }
   
   .progress {
@@ -77,11 +78,14 @@
     height: 5px;
     background: #74579e;
     bottom: 100px;
+    backdrop-filter: blur(10px) saturate(90%);
+    -webkit-backdrop-filter: blur(10px) saturate(90%);
   }
   .imagediv{
     width:80%;
     height:47vh;
     border-radius: 20px;
+    border: 25px solid #74579e;
     position: relative;
     max-height: 90vh;
     margin: 20px;
@@ -126,7 +130,7 @@
     }
   }
   .sectioncl{
-    height: 110vh;
+    height: 200vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,7 +139,7 @@
     scroll-snap-align: center;
     perspective: 700px;
     @include tablet{
-      height:100vh;
+      height:150vh;
 
     }
     @include desktop{
@@ -184,5 +188,15 @@
         margin: 1rem;
         color: #74579e;
         font-family: 'Sarisfy',cursive;
+    }
+    &__skills-list{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    &__skill-item{
+      padding: 0;
+      margin: 0;
+      color: #f16764;
     }
   }

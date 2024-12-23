@@ -29,7 +29,7 @@ const Hero = () => {
                 <div className="hero">
                     <div className="intro-div">
                         <h1 className="greetings">Hello!</h1>
-                        <p className="intro">I'm <span >Geetha</span>. I am a Software Engineer. <br/><br/>I'm passionate about building user-centric web apps. Currently focused on React.js, TypeScript and Next.js, I enjoy learning new technologies and creating seamless, impactful digital experiences. 😊<br /><br /> Feel free to reach out anytime. Let's connect!</p>
+                        <p className="intro">I'm <span >Geetha</span>. I am a Software Developer. <br/><br/>I'm passionate about building user-centric web apps. Currently focused on React.js, TypeScript and Next.js, I enjoy learning new technologies and creating seamless, impactful digital experiences. 😊<br /><br /> Feel free to reach out anytime. Let's connect!</p>
                         <a href={assets.resume} target="_blank" rel="noopener noreferrer">
                             <button className="resume-btn">Resume</button>
                         </a>

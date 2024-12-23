@@ -13,10 +13,12 @@ import {
     return useTransform(value, [0, 1], [-distance, distance]);
   }
   
-  function Image({ imgSrc, title, description, id }) {
+  function Image({ imgSrc, title, description, skills, id }) {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref });
     const y = useParallax(scrollYProgress, 300);
+
+    const descriptionParts = description.split('\n');
   
     return (
       <section className='sectioncl'>
@@ -42,7 +44,20 @@ import {
                       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, suscipit.</p>
                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, recusandae?</p> */}
                       <h3>{title}</h3>
-                      <p>{description}</p>
+                      <div>
+                        {descriptionParts.map((part, index) => (
+                          <p key={index}>{part}</p>
+                        ))}
+                      </div>
+                      <h3>Skills</h3>
+                      <div className="mywork__skills-list">
+                            {skills.map((skill, index) => (
+                              // <React.Fragment key={index}>
+                                <p className="mywork__skill-item">{skill}</p>
+                                // {index < skills.length - 1 && <span>, </span>} 
+                              // </React.Fragment>
+                            ))}
+                          </div>
                     </div>
                     </div>
         </motion.div>
@@ -69,7 +84,7 @@ const Parallax = () => {
           <h2 className='proj'><span>Projects </span>+++</h2>
     <div className='scrollwork'>
       {Object.keys(proj).map((key, index) => {
-        const { imgSrc, title, description } = proj[key];
+        const { imgSrc, title, description, skills } = proj[key];
         return(
         // <Image key={key} id={key} imgSrc={proj[key]} />
         <Image
@@ -78,6 +93,8 @@ const Parallax = () => {
                 imgSrc={imgSrc}
                 title={title}
                 description={description}
+                skills={skills}
+
               />
         );
       })}
