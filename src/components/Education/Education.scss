@@ -5,7 +5,7 @@
 .container{
     max-width:1200px;
     margin:10px auto;
-
+    margin-bottom: 3rem;
     &__row{
         display: grid;
         grid-column-gap:0px;
@@ -94,12 +94,13 @@
         padding: 15px 20px;
         border-radius: 10px;
         border-left: 5px solid #f16764;
-        box-shadow: 0px 1px 1px 0px #f16764;
+        // box-shadow: 0px 1px 1px 0px #f16764;
+        box-shadow: 0 0.5rem 1rem rgba(116, 87, 158, 0.2), 0 0.5rem 2rem rgba(116, 87, 158, 0.25), 0 1rem 3rem rgba(116, 87, 158, 0.3);
         //
         backdrop-filter: blur(10px) saturate(90%);
         -webkit-backdrop-filter: blur(10px) saturate(90%);
         border-radius: 12px;
-        border-left: 5px solid #f16764;
+        border-left: 5px solid  rgba(116, 87, 158, 0.2);
         //
 
         &::before{

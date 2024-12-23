@@ -2,7 +2,8 @@
 @use "../../../styles/partials/mixins" as *;
 
 .about,
-.experience{
+.experience,
+.connection{
     // height: 100vh;
     width: 100%;
     background-color: #74579e;
@@ -65,7 +66,6 @@
         right: 1.25rem;
         bottom: 0;
         border-radius: .9375rem;
-        // box-shadow: 0 1.25rem 2.5rem #74579e;
         z-index: -1;
     }
 
@@ -115,9 +115,7 @@
     }
 
     &__content{
-        //
-        // backdrop-filter: blur(10px) saturate(90%);
-        // -webkit-backdrop-filter: blur(10px) saturate(90%);
+
         border-radius: 12px;
         border: 1px solid rgba(255, 255, 255, 0.125);
         //
@@ -155,7 +153,6 @@
         }
         @include desktop{
             width:50%;
-            // padding-right: 3rem;
         }
     }
     &__content-para{
@@ -169,14 +166,6 @@
       font-size: 32px;
       margin: 3rem;
       color: #f16764;
-    //   padding-top: 8rem;
-
-    //   @include tablet{
-    //     margin: 1rem 3rem;
-    //   }
-    //   @include desktop{
-    //     margin: 2rem 4rem;
-    //   }
 }
 .waves2{
     background-image: url('../../../assets/waves2.svg'); 
@@ -192,10 +181,26 @@
 .skillset{
     margin: 1rem;
     margin-bottom: 3rem;
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    @include tablet{
+        width: 80%;
+    }
     @include desktop{
         margin:1rem 3rem;
         margin-bottom: 6rem;
+        width: 70%;
+        gap: 20px;
     }
+}
+.skillset-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .cert{
     margin: 1rem;

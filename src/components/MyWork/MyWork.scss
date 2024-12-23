@@ -1,42 +1,5 @@
 @use "../../../styles/partials/mixins" as *;
 
-// body {
-    // --black: #000000;
-    // --ash-black: #222;
-    // --white: #fafafa;
-    // --sky: #00ccff;
-    // --green: #22dddd;
-    // --blue: #1300ff;
-    // --dusk: #6600ff;
-    // --purple: #9900ff;
-    // --pink: #ff0066;
-    // --red: #fe0222;
-    // --orange: #fd7702;
-    // --yellow: #ffbb00;
-  
-    // --background: var(--ash-black);
-    // --accent: var(--white);
-  
-    // margin: 0;
-    // padding: 0;
-    // background-color: var(--background);
-    // color: var(--accent);
-//   }
-  
-//   * {
-//     font-family: sofia-pro, sans-serif;
-//     font-weight: 400;
-//     font-style: normal;
-    // 
-//   }
-  
-//   h1,
-//   h2,
-//   h3 {
-//     font-family: sofia-pro, sans-serif;
-//     font-weight: 600;
-//     font-style: normal;
-//   }
   
   .scrollwork{
    scroll-snap-type: y mandatory;
@@ -68,7 +31,6 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    // border-radius: 10px;
   }
   
   .progress {
@@ -97,7 +59,6 @@
     }
     @include desktop{
         height:71vh;
-        // margin:10rem;
     }
   }
   .detailsdiv{
@@ -113,13 +74,11 @@
     //
     backdrop-filter: blur(10px) saturate(90%);
     -webkit-backdrop-filter: blur(10px) saturate(90%);
-    // border-radius: 12px;
+
     border: 1px solid rgba(255, 255, 255, 0.125);
     //
     @include tablet{
-        // width:26rem;
         height:30vh;
-      
     }
     @include desktop{
         position:relative;
@@ -130,16 +89,15 @@
     }
   }
   .sectioncl{
-    height: 200vh;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: space-between;
     position: relative;
     scroll-snap-align: center;
     perspective: 700px;
     @include tablet{
-      height:150vh;
+      height:120vh;
 
     }
     @include desktop{

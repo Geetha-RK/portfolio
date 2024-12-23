@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+// import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { assets } from "../assets";
 import "./Hero.scss";
 import { Link } from "react-router-dom";

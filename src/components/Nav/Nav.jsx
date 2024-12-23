@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+// import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { assets } from "../assets";
 import "./Nav.scss";
 import { Link } from "react-router-dom";
@@ -14,13 +14,7 @@ const Nav = () => {
     
     <div className="nav">
       <div className="nav__logo">
-        {/* <DotLottieReact
-          src="https://lottie.host/b39171cb-ee7c-4ec8-9959-e4ff4719f82d/YfFikknMIm.lottie"
-          width="50px"
-          height="50px"
-          loop
-          autoplay
-        /> */}
+      
         <img  className="logo" src={assets.logo} alt="logo" />
         {/* <div className="nav__myname">Geetha R K</div> */}
       </div>

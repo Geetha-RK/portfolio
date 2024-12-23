@@ -34,6 +34,7 @@ const About = () => {
                     </div>
             </div>
             <h2 className='heading'><span>Skills</span> I bring</h2>
+            <section className='skillset-container'>
             <div className='skillset'>
             {Object.keys(skillset).map((key, index) => (
                     <img key={index} src={skillset[key]} alt={`Skill ${index + 1}`} />
@@ -42,7 +43,7 @@ const About = () => {
                 <br /><img className="cert" src={assets.pd1} alt="pd1" />
                 <img className="cert" src={assets.admin} alt="admin" />
             </div>
-
+            </section>
         </section>
     </div>
   )

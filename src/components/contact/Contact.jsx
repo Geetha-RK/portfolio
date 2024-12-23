@@ -12,7 +12,9 @@ export const Contact = () => {
         <div className='cent'>
         <div className='connection'>
             <p className='connection__para'>I'm excited about the possibility of collaborating and working together. <br /><br />Feel free to reach out via email. I look forward to hearing from you!</p>
-            <button className='connection__email'>Email</button>
+            <a href="mailto:youremail@example.com" className='connection__email'>
+              <button className='connection__email'>Email</button> 
+            </a>
         </div>
         </div>
         </section>
