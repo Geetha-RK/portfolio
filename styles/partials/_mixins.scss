@@ -1,6 +1,5 @@
 
 
-/* media query mixins */
 @mixin mobile {
     @media (min-width: 320px) and (max-width: 767px) {
         @content;
@@ -20,69 +19,48 @@
     }
 }
 
-@keyframes leaves{
-    0% {
-        top:-100%;
-        opacity: 0;
-    }
-    10%{
-        opacity: 1;
-    }
-    100%{
-        top:110%;
-    }
-}
+// @keyframes leaves{
+//     0% {
+//         top:-100%;
+//         opacity: 0;
+//     }
+//     10%{
+//         opacity: 1;
+//     }
+//     100%{
+//         top:110%;
+//     }
+// }
+
 
 // @keyframes animate {
 //     0% {
 //         transform: rotate(0deg);
 //     }
-//     20% {
-//         transform: rotate(45deg);
-//     }
-//     40% {
-//         transform: rotate(90deg);
-//     }
-//     60% {
-//         transform: rotate(125deg);
-//     }
-//     80% {
-//         transform: rotate(180deg);
-//     }
 //     100% {
-//         transform: rotate(225deg);
+//         transform: rotate(360deg); 
 //     }
 // }
 
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg); /* Make a full rotation */
-    }
-}
 
-// Keyframe Animations
-
-@keyframes slideIn {
-    0% {
-      transform: translateX(-50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
+// @keyframes slideIn {
+//     0% {
+//       transform: translateX(-50px);
+//       opacity: 0;
+//     }
+//     100% {
+//       transform: translateX(0);
+//       opacity: 1;
+//     }
+//   }
   
-  @keyframes fadeInZoom {
-    0% {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
+//   @keyframes fadeInZoom {
+//     0% {
+//       opacity: 0;
+//       transform: scale(0.9);
+//     }
+//     100% {
+//       opacity: 1;
+//       transform: scale(1);
+//     }
+//   }

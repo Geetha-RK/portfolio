@@ -1,136 +1,128 @@
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/mixins" as *;
 
-.bglayer{
-  background-color: #74579e;
+.bglayer {
+  background-color: $primary;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 .box,
 .box1 {
   position: relative;
-  background-image: url('../../../assets/bg.jpg'); 
-  background-size: cover; 
-  background-position: center center; 
-  background-repeat: no-repeat; 
+  background-image: url("../../../assets/bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   width: 100%;
   height: auto;
   max-width: 100vw;
   overflow: hidden;
-  
-  @include tablet{
-    margin:0 5rem;
-    width:80%;
+
+  @include tablet {
+    margin: 0 5rem;
+    width: 80%;
   }
   @include desktop {
-    margin:0 10rem;
-    width:70%;
-   
+    margin: 0 10rem;
+    width: 70%;
   }
 }
-.box{
+.box {
   border-radius: 1rem;
-
 }
 
-  .hero-image{
-    display: flex;   //girl
-    justify-content: center;
-    align-items: center;
-    width:100%;
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 
-    @include desktop{
-      margin-right: 2rem;
-
-    }
+  @include desktop {
+    margin-right: 2rem;
   }
-  .greetings{
-    font-family: 'Matemasie';
-    font-weight: 400;
-    font-style: normal;
-    font-size: 46px;
-    color:#F48498;
-    margin: 0;
-    margin-bottom: 2rem;
-  }
-  .intro{
-    font-family: "Satisfy", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    color:#74579e;
-    margin: 0;
-  }
-  .intro-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
-    @include tablet{
-      align-items: center;
-    }
-    @include desktop{
-      padding: 0 2rem 0 3rem;
-    }
-  }
-  span{
-    color: #F48498;
-    font-family: 'Matemasie';
-  }
-  .hero{
-    display: flex;
-    flex-direction: column;
-
-    @include desktop{
-      flex-direction: row;
-    }
-  }
-  .connect{
-    display: flex;
+}
+.greetings {
+  font-family: "Pacifico", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 46px;
+  color: $secondary;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+.intro {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: $primary;
+  margin: 0;
+}
+.intro-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  @include tablet {
     align-items: center;
-    justify-content: space-around;
-    margin: 1rem;
-    cursor: pointer;
-    transition: transform 0.3s ease;
   }
-  .connect:hover {
-    transform: scale(1.005);  
+  @include desktop {
+    padding: 0 2rem 0 3rem;
   }
-  .resume-btn{
-    width:8rem;
-    margin: 1rem 0;
-    border-radius: 4px;
-    height: 2rem;
-    font-family: "Gaegu"; 
-    font-weight: 400;
-    font-style: normal;
-    color: azure;
-    background-color: #74579e;
-    font-size: 20px;
-    border: none; 
-    cursor: pointer;  
-    text-align: center; 
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s, transform 0.3s;
+}
+span {
+  color: $secondary;
+  font-family: "Pacifico", serif;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
   }
+}
+.connect {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.connect:hover {
+  transform: scale(1.005);
+}
+.resume-btn {
+  width: 8rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  height: 2rem;
+  font-family: "Gaegu";
+  font-weight: 400;
+  font-style: normal;
+  color: $whiteghost;
+  background-color: $primary;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
 
 .resume-btn:hover {
-  background-color: #F48498;
-  transform: scale(1.05);  
+  background-color: $secondary;
+  transform: scale(1.05);
 }
-
 
 .resume-btn:active {
-  transform: scale(0.98);  
+  transform: scale(0.98);
 }
-.girl{
-  width:100%;
-  margin:1rem;
+.girl {
+  width: 100%;
+  margin: 1rem;
 }
-
-
-

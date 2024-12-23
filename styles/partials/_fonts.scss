@@ -1,34 +1,18 @@
-// @import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Matemasie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Matemasie&family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
-// @font-face {
-//     font-family: 'archivo';
-//     src: url('https://use.typekit.net/zuo0ava.css');
-//     font-display: swap;  
-// }
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 @font-face{
     font-family:"Gaegu" ;
     src: url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
     font-weight: 400;
-  font-style: normal;
+    font-style: normal;
 }
+
+
 @font-face{
-  font-family: "Matemasie";
-  src: url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+  font-family: "Pacifico", serif;
+  src:url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
   font-weight: 400;
-  font-style: normal;
-}
-@font-face{
-  font-family: "Quicksand";
-  src: url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face{
-  font-family: "Fira Code";
-  src: url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
-  font-weight: 300;
   font-style: normal;
 }

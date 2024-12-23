@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-// import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { assets } from "../assets";
 import "./Hero.scss";
-import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -27,15 +25,6 @@ const Hero = () => {
             </a>
           </div>
           <div className="hero-image">
-            {/* <DotLottieReact
-                // src="https://lottie.host/406e9d7e-5cfe-4624-bccd-1bf9f73d27b0/BbwqFZ4KtT.lottie"
-                src="https://lottie.host/baacc200-a03b-4766-94a7-e3013d812e92/1DkAAel6Ew.lottie"
-                width="25px"
-                height="25px"
-                color="#74579e"
-                loop
-                autoplay
-                                /> */}
             <img className="girl" src={assets.girl} alt="girl" />
           </div>
         </div>

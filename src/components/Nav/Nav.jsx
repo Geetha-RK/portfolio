@@ -14,15 +14,7 @@ const Nav = () => {
         <img  className="logo" src={assets.logo} alt="logo" />
       </div>
       <nav className="navbar">
-        {/* Hamburger Icon */}
-        {/* <div className="navbar__hamburger" onClick={toggleMenu}>
-          <img
-            src={assets.hamberger}
-            alt="Hamburger Icon"
-            className="navbar__hamburger-icon"  
-          />
-        </div> */}
-        {/* Navbar links */}
+
         
     <div className="navbar__icons-box">
     <ul className={`navbar__list`}>

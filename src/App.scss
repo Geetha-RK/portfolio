@@ -3,14 +3,3 @@
 @use '../styles/partials/mixins'; 
 @use '../styles/partials/variables'; 
 
-
-.element {
-    position: absolute;
-    inset: 0;
-    z-index: -10;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 24px 20px; 
-  }
