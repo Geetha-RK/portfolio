@@ -49,7 +49,7 @@ const Education = () => {
               <span className="container__circle"></span>
             </section>
             <section className="container__contents">
-              <time className="container__time">2023</time>
+              <time className="container__time">2023-2024</time>
               <div
                 className={`container__description ${
                   isVisible[0] ? "container__show" : ""
@@ -58,7 +58,7 @@ const Education = () => {
                 <h3 className="container__title">
                   1. Diploma,Software Engineering, 🏫
                 </h3>
-                <p className="container__para">Aug-2023 to Nov-2023</p>
+                <p className="container__para">Aug-2024 to Nov-2024</p>
                 <p className="container__para">BrainStation</p>
                 <br />
                 <h3 className="container__title">
