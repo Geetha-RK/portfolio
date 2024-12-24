@@ -18,6 +18,7 @@ import contact from "../../assets/icons/address-book.png";
 import experience from "../../assets/icons/desk.png";
 import projects from "../../assets/icons/display-code.png";
 import logo from "../../assets/icons/logo.png";
+import live from '../../assets/icons/upload.png'
 
 //
 import git from "../../assets/skills/git.svg";
@@ -58,6 +59,7 @@ export const assets = {
   resume,
   githubpng,
   bg,
+  live
 };
 
 export const proj = {
@@ -81,6 +83,8 @@ export const proj = {
       "GitHub",
       "Knex.js",
     ],
+    githublink:"https://github.com/Geetha-RK/WellnessPath-client",
+    live:"https://wellnesspath.netlify.app"
   },
   project3: {
     imgSrc: proj3,
@@ -100,6 +104,8 @@ export const proj = {
       "GitHub",
       "Knex.js",
     ],
+    githublink:"https://github.com/Geetha-RK/InStock-client",
+    live:""
   },
   project4: {
     imgSrc: proj4,
@@ -107,21 +113,18 @@ export const proj = {
     description: `BandSite is a fully responsive website for an emerging band, featuring a Main Page with band information and a photo gallery, and a Shows Page listing upcoming performances. The site adapts to all screen sizes, ensuring accessibility and an engaging user experience. With a clean design and easy-to-navigate layout, it showcases the band's presence and keeps fans updated on upcoming shows. 
                     The project utilizes SCSS and JavaScript for a dynamic, responsive interface.`,
     skills: ["HTML5", "SASS", "JavaScript", "Axios", "Git", "GitHub"],
+    githublink:"https://github.com/Geetha-RK/geetha-rashinkarkumar-bandsite",
+    live:""
   },
-  project2: {
-    imgSrc: proj2,
-    title: "Bell-n-Bytes",
-    description: `Developed during an intense 24-hour hackathon, Bell n Bytes is a website created by my team to raise awareness about the impactful work Bell is doing in the community. 
-                    Our project aimed to highlight Bell’s initiatives, share stories, and encourage further community engagement. The experience of collaborating in real-time with my team using Git for version control was both challenging and rewarding. 
-                  Presenting our website to the judges was an exhilarating moment that showcased our teamwork and dedication.`,
-    skills: ["React", "SCSS", "Axios", "JSON", "Git", "GitHub", "Figma"],
-  },
+ 
   project5: {
     imgSrc: proj6,
     title: "Country Flag Trivia",
     description: ` Built in an intensive 6-hour hackathon, this game tests players' knowledge by showing a country’s flag and offering four country name options to choose from within a set time limit. Once the timer runs out or the player selects an answer, the game reveals further details about the country, including language, currency, and population. 
                   Designed with a server-client architecture and utilizing a JSON file, the game provides a fast-paced, educational, and fun experience.`,
     skills: ["React", "SCSS", "Axios", "JSON", "Git", "GitHub"],
+    githublink:"https://github.com/Geetha-RK/country-trivia",
+    live:""
   },
   project6: {
     imgSrc: proj5,
@@ -142,6 +145,18 @@ export const proj = {
       "GitHub",
       "Knex.js",
     ],
+    githublink:"https://github.com/Geetha-RK/geetha-rashinkarkumar-brainflix",
+    live:""
+  },
+  project2: {
+    imgSrc: proj2,
+    title: "Bell-n-Bytes",
+    description: `Developed during an intense 24-hour hackathon, Bell n Bytes is a website created by my team to raise awareness about the impactful work Bell is doing in the community. 
+                    Our project aimed to highlight Bell’s initiatives, share stories, and encourage further community engagement. The experience of collaborating in real-time with my team using Git for version control was both challenging and rewarding. 
+                  Presenting our website to the judges was an exhilarating moment that showcased our teamwork and dedication.`,
+    skills: ["React", "SCSS", "Axios", "JSON", "Git", "GitHub", "Figma"],
+    githublink:"",
+    live:""
   },
 };
 

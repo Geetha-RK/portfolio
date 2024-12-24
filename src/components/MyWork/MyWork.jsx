@@ -1,14 +1,14 @@
 import React from "react";
 import { useRef } from "react";
 import "./MyWork.scss";
-import { proj } from "../assets";
+import { assets, proj } from "../assets";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-function Image({ imgSrc, title, description, skills, id }) {
+function Image({ imgSrc, title, description, skills, id,githublink,live }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
@@ -35,7 +35,18 @@ function Image({ imgSrc, title, description, skills, id }) {
             </div>
           </div>
           <div className="mywork__content">
-            <h3>{title}</h3>
+            <div className="mywork__title">
+              <h3>{title}</h3>
+              <div className="mywork__icon-container">
+                <a href={githublink} target="_blank" rel="noopener noreferrer"> 
+                  <img className="mywork__icons"  src={assets.githubpng} alt="github" />
+                </a>
+                <a href={live} target="_blank" rel="noopener noreferrer"> 
+                  <img className="mywork__icons"  src={assets.live} alt="live or preview" />
+                </a>
+              </div>
+            </div>
+            
             <div>
               {descriptionParts.map((part, index) => (
                 <p key={index}>{part}</p>
@@ -71,7 +82,7 @@ const Parallax = () => {
         </h2>
         <div className="scrollwork">
           {Object.keys(proj).map((key, index) => {
-            const { imgSrc, title, description, skills } = proj[key];
+            const { imgSrc, title, description, skills, githublink,live } = proj[key];
             return (
               <Image
                 key={key}
@@ -80,6 +91,8 @@ const Parallax = () => {
                 title={title}
                 description={description}
                 skills={skills}
+                githublink={githublink}
+                live={live}
               />
             );
           })}
