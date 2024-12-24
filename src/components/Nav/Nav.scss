@@ -1,152 +1,109 @@
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/mixins" as *;
 
+.nav {
+  display: flex;
+  width: 100%;
+  height: 10rem;
+  padding: 1rem;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../../assets/wave.svg");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-color: $primary;
 
-  .nav{
-    display: flex;
-    width: 100%;
-    height: 10rem;
-    padding: 1rem;
-    justify-content: space-between;
-    background-image: url('../../../assets/wave.svg'); 
-    background-size: cover; 
-    background-position: bottom center; 
-    background-repeat: no-repeat; 
-    background-color: #74579e;
-    // position: fixed;
-    // z-index: 10;
-    @include tablet{
-      justify-content: space-evenly;
-    }
-  
-    @include desktop{
-      padding-right:3rem;
-      justify-content: space-evenly;
-    }
-  
-    &__giflottie{
-      justify-content: flex-end;
-    }
-  
-    &__logo{
-      height:7rem;
-      width:10rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-  
-      @include tablet{
-        height:5rem;
-        width:7rem;
-      }
-    }
-  
-    &__myname{
-      font-family: "Satisfy", cursive;
-      font-weight: 400;
-      font-style: normal;
-      font-size: large;
-      color: #22DDDD;
-    
-      @include tablet{ 
-        font-size: large;
-      }
-  
-    }
+  @include tablet {
+    justify-content: space-evenly;
+    flex-direction: row;
   }
-  .navbar {
+
+  @include desktop {
+    padding-right: 3rem;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  &__logo {
+    height: 7rem;
+    width: 10rem;
     display: flex;
-    list-style: none;
+    flex-direction: column;
     align-items: center;
-    &__list {
-      display: none;
-      
-      @include tablet{
-        display: flex;
-        justify-content: space-around;
-      }
-      @include desktop{
-        display: flex;
-        justify-content: space-around;
-      }
+    justify-content: center;
+
+    @include tablet {
+      height: 5rem;
+      width: 7rem;
     }
-  
-    &__item {
-      margin: 0 15px;
-      font-family: "Gaegu"; 
-      font-weight: 400;
-      font-style: normal;
-      font-size: 24px;
-    }
-  
-    &__link {
-      text-decoration: none;
-      // color:#f06292;
-      // color:rgb(192, 71, 10);
-      // color: whitesmoke;
-      color: #22DDDD;
-  
-      
-      font-size: 24px;
-      list-style: none;
-  
-      @include tablet{
-        font-size: 30px;
-      }
-      @include desktop{
-        font-size: 36px;
-      }
-      &:hover {
-        color: #f39c12;  
-      }
-    }
-    .navbar__item::marker {
-      content: none;  
-    }
-    &__link-text {
-      display: none;
-      font-size: 14px; /* Adjust font size as needed */
-      margin-top: 5px; /* Adjust spacing between the image and text */
-      text-align: center;
-    }
-    &__link:hover {
-      display: block;
-    }
-    &__icons-box{
+  }
+}
+.navbar {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  &__list {
+    display: flex;
+    padding: 0;
+
+    @include tablet {
       display: flex;
-      justify-content: space-between;
-      
+      justify-content: space-around;
+    }
+    @include desktop {
+      display: flex;
+      justify-content: space-around;
     }
   }
 
-  .logo{
-   
-    height:50px;
-    margin-top: 2rem;
+  &__item {
+    margin: 0 15px;
+    font-family: "Gaegu";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
   }
-  
-    .navbar__hamburger {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      width: 30px;
-      height: 25px;
-      cursor: pointer;
-  
-      @include tablet{
-        display: none;
-      }
-      @include desktop{
-        display: none;
-      }
-  
-      .navbar__bar {
-        width: 30px;
-        height: 4px;
-        background-color: #74579e;
-        border-radius: 2px;
-      }
-      
+
+  &__link {
+    text-decoration: none;
+    list-style: none;
+
+    &:hover {
+      color: $secondary;
     }
+  }
+
+  &__item::marker {
+    content: none;
+  }
+
+  &__link-text {
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+  }
+  &__link:hover {
+    display: block;
+  }
+  &__icons-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bar {
+    width: 30px;
+    height: 4px;
+    background-color: $primary;
+    border-radius: 2px;
+  }
+  &__hamburger-icon {
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+  }
+}
+
+.logo {
+  height: 50px;
+}

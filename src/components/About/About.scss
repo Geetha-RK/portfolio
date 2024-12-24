@@ -2,190 +2,182 @@
 @use "../../../styles/partials/mixins" as *;
 
 .about,
-.experience{
-    // height: 100vh;
-    width: 100%;
-    background-color: #74579e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.vs-container{
-    // background-color: gray;
-    width: 100%;
-    height: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &__vsbox{
-        width: 30rem;
-        height: 30rem;
-        background-image: url('../../../assets/canva.jpeg');
-        border-radius: 10px;
-        margin: 1rem;
-        @include desktop{
-            width:50rem;
-        }
-    }
-    &__about{
-        color: beige;
-        padding: 2.9rem;
-        font-family: 'Fira Code';
-        
-    }
+.experience,
+.connection {
+  width: 100%;
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .screen {
-    position: relative;
-    background-color: rgb(203, 199, 199);
-    //
-    backdrop-filter: blur(10px) saturate(90%);
-    -webkit-backdrop-filter: blur(10px) saturate(90%);
-    background-color: rgba(203, 199, 199, 0.1);
+  position: relative;
+  background-color: rgb(203, 199, 199);
+  //
+  backdrop-filter: blur(10px) saturate(90%);
+  -webkit-backdrop-filter: blur(10px) saturate(90%);
+  background-color: rgba(203, 199, 199, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  //
+  border-radius: 0.9375rem;
+  margin: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(116, 87, 158, 0.2),
+    0 0.5rem 2rem rgba(116, 87, 158, 0.25), 0 1rem 3rem rgba(116, 87, 158, 0.3);
+
+  @include tablet {
+    margin: 1rem 3rem;
+  }
+  @include desktop {
+    margin: 1rem 4rem;
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 0;
+    border-radius: 0.9375rem;
+    z-index: -1;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+    background-color: $primary;
+    border-top-left-radius: 0.9375rem;
+    border-top-right-radius: 0.9375rem;
+
+    &--left {
+      margin-right: auto;
+    }
+
+    &--right {
+      display: flex;
+    }
+
+    &-button {
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      margin-right: 0.1875rem;
+      border-radius: 0.5rem;
+
+      &--close {
+        background-color: $pale-red;
+      }
+
+      &--maximize {
+        background-color: $pale-orange;
+      }
+
+      &--minimize {
+        background-color: $pale-red;
+      }
+    }
+
+    &-ellipsis {
+      width: 0.1875rem;
+      height: 0.1875rem;
+      margin-left: 0.125rem;
+      border-radius: 0.5rem;
+      background-color: $black;
+    }
+  }
+
+  &__content {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
-    //
-    border-radius: .9375rem;
-    margin: 1rem;
-    box-shadow: 0 0.5rem 1rem rgba(116, 87, 158, 0.2), 0 0.5rem 2rem rgba(116, 87, 158, 0.25), 0 1rem 3rem rgba(116, 87, 158, 0.3);
     
-    @include tablet{
-        margin: 1rem 3rem;
-    }
-    @include desktop{
-        margin: 1rem 4rem;
-    }
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 1.25rem;
-        right: 1.25rem;
-        bottom: 0;
-        border-radius: .9375rem;
-        // box-shadow: 0 1.25rem 2.5rem #74579e;
-        z-index: -1;
-    }
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 1rem;
+    color: $primary;
 
-    &__header {
-        display: flex;
-        align-items: center;
-        padding: .625rem 1.25rem;
-        background-color:#74579e;
-        border-top-left-radius: .9375rem;
-        border-top-right-radius: .9375rem;
-        
-        &--left {
-            margin-right: auto;
-        }
-
-        &--right {
-            display: flex;
-        }
-
-        &-button {
-            display: inline-block;
-            width: .5rem;
-            height: .5rem;
-            margin-right: .1875rem;
-            border-radius: .5rem;
-
-            &--close {
-                background-color: #A3C8FF;
-            }
-
-            &--maximize {
-                background-color: orange;
-            }
-
-            &--minimize {
-                background-color:#f16764;
-            }
-        }
-
-        &-ellipsis {
-            width: .1875rem;
-            height: .1875rem;
-            margin-left: .125rem;
-            border-radius: .5rem;
-            background-color: rgb(23, 23, 23);
-        }
+    @include tablet {
+      flex-direction: row;
+      margin: 2rem;
+      padding-bottom: 2rem;
     }
-
-    &__content{
-        //
-        // backdrop-filter: blur(10px) saturate(90%);
-        // -webkit-backdrop-filter: blur(10px) saturate(90%);
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.125);
-        //
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        margin: 1rem;
-        color: #74579e;
-       
-        @include tablet{
-            flex-direction: row;
-            margin: 2rem;
-            padding-bottom: 2rem;
-        }
-        @include desktop{
-            flex-direction: row;
-            margin: 3rem;
-            padding-bottom: 4rem;
-        }
-    }
-    &__content-left{
-        padding-right: 1rem;
-        @include tablet{
-            width:50%;
-            padding-right: 3rem;
-        }
-        @include desktop{
-            width:50%;
-            padding-right: 3rem;
-        }
-    }
-    &__content-right{
-        @include tablet{
-            width:50%;
-        }
-        @include desktop{
-            width:50%;
-            // padding-right: 3rem;
-        }
-    }
-    &__content-para{
-        font-family: 'Satisfy',cursive;
-    }
-}
-.heading{
-        font-family: "Gaegu"; 
-      font-weight: 400;
-      font-style: normal;
-      font-size: 32px;
+    @include desktop {
+      flex-direction: row;
       margin: 3rem;
-      color: #f16764;
-    //   padding-top: 8rem;
-
-    //   @include tablet{
-    //     margin: 1rem 3rem;
-    //   }
-    //   @include desktop{
-    //     margin: 2rem 4rem;
-    //   }
-}
-.waves2{
-    background-image: url('../../../assets/waves2.svg'); 
-    background-size: cover; 
-    background-position: bottom center; 
-    background-repeat: no-repeat; 
-    min-height: 150px;
-
-    @include desktop{
-        min-height:250px;
+      padding-bottom: 4rem;
     }
+  }
+  &__content-left {
+    padding-right: 1rem;
+    @include tablet {
+      width: 50%;
+      padding-right: 3rem;
+    }
+    @include desktop {
+      width: 50%;
+      padding-right: 3rem;
+    }
+  }
+  &__content-right {
+    @include tablet {
+      width: 50%;
+    }
+    @include desktop {
+      width: 50%;
+    }
+  }
+  &__content-para {
+    font-family: "Satisfy", cursive;
+  }
+}
+.heading {
+  font-family: "Gaegu";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  margin: 3rem;
+  color: $red;
+}
+.waves2 {
+  background-image: url("../../../assets/waves2.svg");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  min-height: 150px;
+
+  @include desktop {
+    min-height: 250px;
+  }
+}
+.skillset {
+  margin: 1rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  @include tablet {
+    width: 80%;
+  }
+  @include desktop {
+    margin: 1rem 3rem;
+    margin-bottom: 6rem;
+    width: 70%;
+    gap: 20px;
+  }
+}
+.skillset-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cert {
+  margin: 1rem;
+  width: 5rem;
+  height: 5rem;
 }

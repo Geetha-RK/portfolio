@@ -1,188 +1,172 @@
 @use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
 
-// body {
-    // --black: #000000;
-    // --ash-black: #222;
-    // --white: #fafafa;
-    // --sky: #00ccff;
-    // --green: #22dddd;
-    // --blue: #1300ff;
-    // --dusk: #6600ff;
-    // --purple: #9900ff;
-    // --pink: #ff0066;
-    // --red: #fe0222;
-    // --orange: #fd7702;
-    // --yellow: #ffbb00;
-  
-    // --background: var(--ash-black);
-    // --accent: var(--white);
-  
-    // margin: 0;
-    // padding: 0;
-    // background-color: var(--background);
-    // color: var(--accent);
-//   }
-  
-//   * {
-//     font-family: sofia-pro, sans-serif;
-//     font-weight: 400;
-//     font-style: normal;
-    // 
-//   }
-  
-//   h1,
-//   h2,
-//   h3 {
-//     font-family: sofia-pro, sans-serif;
-//     font-weight: 600;
-//     font-style: normal;
-//   }
-  
-  .scrollwork{
-   scroll-snap-type: y mandatory;
-  }
+.scrollwork {
+  scroll-snap-type: y mandatory;
+}
 
-  
-  ::-webkit-scrollbar {
-    height: 5px;
-    width: 5px;
-    background: #222;
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: #222;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $white;
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: #222;
+}
+
+.work {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.progress {
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: pink;
+  bottom: 15px;
+  backdrop-filter: blur(10px) saturate(90%);
+  -webkit-backdrop-filter: blur(10px) saturate(90%);
+}
+.imagediv {
+  width: 80%;
+  height: 47vh;
+  border-radius: 20px;
+  border: 25px solid $primary;
+  position: relative;
+  max-height: 90vh;
+  margin: 20px;
+  background: $white;
+  overflow: hidden;
+
+  @include desktop {
+    height: 71vh;
   }
-  
-  ::-webkit-scrollbar-thumb {
-    background: white;
-    -webkit-border-radius: 1ex;
+}
+.detailsdiv {
+  position: absolute;
+  top: 551px;
+  width: 80%;
+  height: 30vh;
+  margin: 27px;
+  background-color: $whiteghost;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.9375rem;
+  //
+  backdrop-filter: blur(10px) saturate(90%);
+  -webkit-backdrop-filter: blur(10px) saturate(90%);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  //
+  @include tablet {
+    height: 30vh;
   }
-  
-  ::-webkit-scrollbar-corner {
-    background: #222;
+  @include desktop {
+    position: relative;
+    top: 0;
+    width: 41%;
+    height: 43vh;
   }
-  
-  
-  
-  .work {
+}
+.sectioncl {
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: center;
+  perspective: 700px;
+
+  @include tablet {
+    height: 120vh;
+  }
+  @include desktop {
+    flex-direction: row;
+    height: 100vh;
+  }
+}
+
+.proj {
+  font-family: "Gaegu";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  margin: 1rem;
+  color: $red;
+
+  @include tablet {
+    margin: 1rem 3rem;
+  }
+  @include desktop {
+    margin: 2rem 4rem;
+  }
+}
+.mywork {
+  position: relative;
+  backdrop-filter: blur(10px) saturate(90%);
+  -webkit-backdrop-filter: blur(10px) saturate(90%);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  //
+  border-radius: 0.9375rem;
+  box-shadow: 0 0.5rem 1rem rgba(116, 87, 158, 0.2),
+    0 0.5rem 2rem rgba(116, 87, 158, 0.25), 0 1rem 3rem rgba(116, 87, 158, 0.3);
+
+  &:after {
+    content: "";
+    display: block;
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 1.25rem;
+    right: 1.25rem;
     bottom: 0;
-    width: 100%;
-    height: 100%;
+    border-radius: 0.9375rem;
+    z-index: -1;
   }
-  
-  .progress {
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: #74579e;
-    bottom: 100px;
-  }
-  .imagediv{
-    width:80%;
-    height:47vh;
-    border-radius: 20px;
-    position: relative;
-    max-height: 90vh;
-    margin: 20px;
-    background: var(--white);
-    overflow: hidden;
 
-    @include tablet{
-
-    }
-    @include desktop{
-        height:71vh;
-        // margin:10rem;
-    }
+  &__content {
+    height: auto;
+    margin: 1rem;
+    color: $primary;
+    font-family: "Sarisfy", cursive;
   }
-  .detailsdiv{
-    position: absolute;
-    top:551px;
-    width:80%;
-    height:30vh;
-    margin:27px;
-    background-color:whitesmoke;
+  &__skills-list {
     display: flex;
-    flex-direction: column;
-    border-radius: .9375rem;
-    //
-    backdrop-filter: blur(10px) saturate(90%);
-    -webkit-backdrop-filter: blur(10px) saturate(90%);
-    // border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    //
-    @include tablet{
-        // width:26rem;
-        height:30vh;
-      
-    }
-    @include desktop{
-        position:relative;
-        top:0;
-        width:41%;
-        height:43vh;
-
-    }
+    flex-wrap: wrap;
+    gap: 20px;
   }
-  .sectioncl{
-    height: 110vh;
+  &__skill-item {
+    padding: 0;
+    margin: 0;
+    color: $red;
+  }
+  &__title{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    // justify-content: space-between;
-    position: relative;
-    scroll-snap-align: center;
-    perspective: 700px;
-    @include tablet{
-      height:100vh;
-
-    }
-    @include desktop{
-        flex-direction: row;
-        height:100vh;
-    }
   }
-  .proj{
-    font-family: "Gaegu"; 
-      font-weight: 400;
-      font-style: normal;
-      font-size: 32px;
-      margin: 1rem;
-      color: #f16764;
-
-      @include tablet{
-        margin: 1rem 3rem;
-      }
-      @include desktop{
-        margin: 2rem 4rem;
-      }
+  &__icons{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
   }
-  .mywork{
-    position: relative;
-    backdrop-filter: blur(10px) saturate(90%);
-    -webkit-backdrop-filter: blur(10px) saturate(90%);
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    //
-    border-radius: .9375rem;
-    box-shadow: 0 0.5rem 1rem rgba(116, 87, 158, 0.2), 0 0.5rem 2rem rgba(116, 87, 158, 0.25), 0 1rem 3rem rgba(116, 87, 158, 0.3);
-
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 1.25rem;
-        right: 1.25rem;
-        bottom: 0;
-        border-radius: .9375rem;
-        z-index: -1;
-    }
-
-    &__content{
-        height:auto;
-        margin: 1rem;
-        color: #74579e;
-        font-family: 'Sarisfy',cursive;
-    }
+  &__icon-container{
+    display: flex;
+    justify-content:space-between;
+    gap:10px;
+    align-items: center;
   }
+}
